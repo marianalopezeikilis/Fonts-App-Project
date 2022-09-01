@@ -1,9 +1,10 @@
-import { MapContainer, TileLayer, useMap, Marker, Popup, useMapEvents } from 'react-leaflet'
+import { MapContainer, TileLayer, useMap, Marker, Popup, useMapEvents, GeoJSON } from 'react-leaflet'
 import { render } from 'react-dom';
 import { useState } from "react";
 import './map.css';
 import 'leaflet/dist/leaflet.css';
 import Fuentes from './Fuentes.json';
+
 
 function Map() {
     function LocationMarker() {
@@ -19,12 +20,11 @@ function Map() {
         })
       
         return position === null ? null : (
-          <Marker position={position}>
+          <Marker position={position}  >
             <Popup>You are here</Popup>
           </Marker>
         )
       }
-      
 
     return (
         <>
@@ -36,6 +36,7 @@ function Map() {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
+          <GeoJSON data={Fuentes}  />
           <LocationMarker />
         </MapContainer>
         </>
