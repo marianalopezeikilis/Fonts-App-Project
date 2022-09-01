@@ -3,8 +3,7 @@ import { render } from 'react-dom';
 import { useState } from "react";
 import './map.css';
 import 'leaflet/dist/leaflet.css';
-
-
+import Fuentes from './Fuentes.json';
 
 function Map() {
     function LocationMarker() {
