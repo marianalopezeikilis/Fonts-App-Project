@@ -1,13 +1,13 @@
 import NavBar from "./components/navbar.jsx";
 
-
-function Blog() {
+function BlogLogin() {
 
   return (
     <>
         <NavBar/>
+        <h1>Login</h1>
     </>
   )
 }
 
-export default Blog
+export default BlogLogin
