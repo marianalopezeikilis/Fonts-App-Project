@@ -18,9 +18,9 @@ function Home() {
 
 {/* <Button className='btnfuente'> Fuentes</Button>
 <Button className='btneconews'>EcoNews </Button> */}
-<ButtonBlue text='Blog'/>
+<ButtonBlue text='Blog' ruta='blog' />
 <br/>
-<ButtonBlue text='Fuentes'/>
+<ButtonBlue text='Fuentes' ruta='fuentes'/>
     </div>
   
     </Container>

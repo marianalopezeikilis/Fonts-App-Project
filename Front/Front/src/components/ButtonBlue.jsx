@@ -1,5 +1,5 @@
 import Button from 'react-bootstrap/Button';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 function ButtonBlue(props) {
   return (
@@ -25,10 +25,11 @@ function ButtonBlue(props) {
   
     `}
       </style>
-{/* <Link to='/about'></Link> */}
+      <Link to={props.ruta}>
       <Button  variant="celeste" size="xl">
         {props.text}
       </Button>
+      </Link> 
     </>
   );
 }

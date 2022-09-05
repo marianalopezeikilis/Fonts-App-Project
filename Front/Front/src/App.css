@@ -50,14 +50,14 @@ height: 50px;
 margin:10px;
 }
 
-.texthome .h1home button{
-  font-family: 'Quicksand', sans-serif;
+body .texthome .h1home button .conthome .contconthome .app{
+  font-family: 'Quicksand', sans-serif !important;
 
 }
 
 .conthome {
   background-color: #E8F0F2;
-  font-family: Serif;
+  
   height: 100vh;
  
 }
