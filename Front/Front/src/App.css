@@ -1,3 +1,5 @@
+/* HOME */
+
 .conthome{
   display:flex;
 }
@@ -8,6 +10,15 @@ height: 50px;
 margin:10px;
 }
 
+.divhome {
+  background-color: #E8F0F2;
+  font-family: Serif;
+  text-align: center;
+  padding: 100px;
+}
+
+/* BOTONES HOME */
+
 .btnfuente {
 justify-content: end;
 }
@@ -15,3 +26,4 @@ justify-content: end;
 .btneconews .btnfuente {
 margin:10px;
 } 
+
