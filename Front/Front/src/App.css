@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -38,13 +38,11 @@
 
 .read-the-docs {
   color: #888;
-}
+} */
 
 /* HOME */
 
-.conthome{
-  display:flex;
-}
+
 
 .imgagua {
 width: 50px;
@@ -52,11 +50,24 @@ height: 50px;
 margin:10px;
 }
 
-.divhome {
+.texthome .h1home button{
+  font-family: 'Quicksand', sans-serif;
+
+}
+
+.conthome {
   background-color: #E8F0F2;
   font-family: Serif;
+  height: 100vh;
+ 
+}
+
+.contconthome{
+  padding: 200px;
+  height: 100vh;
+  background-color: #E8F0F2;
   text-align: center;
-  padding: 100px;
+  min-width: 200px;
 }
 
 /* BOTONES HOME */
@@ -65,6 +76,13 @@ margin:10px;
 justify-content: end;
 }
 
-.btneconews .btnfuente {
-margin:10px;
+.btnhome {
+margin:5px;
 } 
+
+
+
+
+#root {
+  padding:0px;
+}
