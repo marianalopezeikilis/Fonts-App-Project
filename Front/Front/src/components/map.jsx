@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import { useState } from "react";
 import './map.css';
 import 'leaflet/dist/leaflet.css';
+import Ubicacion from './miUbi.png';
 import Fuentes from './FuentesCat.json';
 
 
@@ -18,10 +19,15 @@ function Map() {
             map.flyTo(e.latlng, map.getZoom())
           },
         })
-      
+        let loveIcon = L.icon({
+          iconUrl: Ubicacion,
+          iconRetinaUrl: Ubicacion,
+          width: "150%",
+          heigth: "150%",
+        });
         return position === null ? null : (
-          <Marker position={position}  >
-            <Popup>You are here</Popup>
+          <Marker position={position} icon={loveIcon} >
+            <Popup>Estás aquí!</Popup>
           </Marker>
         )
       }
@@ -38,6 +44,7 @@ function Map() {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           <GeoJSON data={Fuentes}  />
+
           <LocationMarker />
         </MapContainer>
         </>
