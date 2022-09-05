@@ -1,7 +1,6 @@
 
 import Map from "./components/map";
 
-
 function App() {
  
 

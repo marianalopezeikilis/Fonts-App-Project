@@ -3,11 +3,17 @@ import { render } from 'react-dom';
 import { useState } from "react";
 import './map.css';
 import 'leaflet/dist/leaflet.css';
-import Ubicacion from './miUbi.png';
+import Ubicacion from './images/miUbi.png';
 import Fuentes from './FuentesCat.json';
-
+import FuenteIco from './images/logo02.png';
 
 function Map() {
+  let FuentesIcon = new L.icon({
+    iconUrl: FuenteIco,
+    iconRetinaUrl: FuenteIco,
+    iconSize: [26, 26]
+  });
+
     function LocationMarker() {
         const [position, setPosition] = useState(null)
         const map = useMapEvents({
@@ -19,7 +25,8 @@ function Map() {
             map.flyTo(e.latlng, map.getZoom())
           },
         })
-        let loveIcon = L.icon({
+
+        let loveIcon = new L.icon({
           iconUrl: Ubicacion,
           iconRetinaUrl: Ubicacion,
           width: "150%",
@@ -30,6 +37,7 @@ function Map() {
             <Popup>Estás aquí!</Popup>
           </Marker>
         )
+
       }
 
       
@@ -43,7 +51,7 @@ function Map() {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          <GeoJSON data={Fuentes}  />
+          <GeoJSON data={Fuentes}></GeoJSON>
 
           <LocationMarker />
         </MapContainer>
