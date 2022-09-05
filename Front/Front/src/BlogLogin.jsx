@@ -1,4 +1,5 @@
 import NavBar from "./components/navbar.jsx";
+import { Button } from 'react-bootstrap';
 
 function BlogLogin() {
 
@@ -6,6 +7,7 @@ function BlogLogin() {
     <>
         <NavBar/>
         <h1>Login</h1>
+        <Button href="add">Login</Button>
     </>
   )
 }
