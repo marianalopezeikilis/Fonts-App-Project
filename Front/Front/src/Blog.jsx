@@ -7,7 +7,7 @@ function Blog() {
   return (
     <>
         <NavBar/>
-        <div className="d-none d-xl-block"><Button href="login">Login</Button></div>
+        <div className="d-none d-xl-block" class="background_blog"><Button href="login">Login</Button></div>
     </>
   )
 }
