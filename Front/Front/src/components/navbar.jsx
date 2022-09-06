@@ -20,10 +20,14 @@ function NavBar() {
     </style>
     <Navbar variant="newcolor">
       <Container>
-        <Nav className="ml-auto">
-          {/*}<Button type="button" onClick={() => goTo('/llista')}</Button>
-            {*/}
-          <Nav.Link href=" "><BsArrowLeftShort style={btn_style}/></Nav.Link>
+        <Nav className="ml-auto d-xl-none" >
+          {
+          window.location.pathname.includes("add" || "login")?
+          <Nav.Link href="blog"><BsArrowLeftShort style={btn_style}/></Nav.Link>: 
+          window.location.pathname.includes("blog")?
+          <Nav.Link href="home"><BsArrowLeftShort style={btn_style}/></Nav.Link>:
+          <Nav.Link href=""><BsArrowLeftShort style={btn_style}/></Nav.Link>
+        }
         </Nav>
         <Nav className="m-auto">
           <Navbar.Brand href=" ">
@@ -36,7 +40,7 @@ function NavBar() {
             />
           </Navbar.Brand>
         </Nav>
-        <Nav className="mr-auto">{
+        <Nav className="mr-auto d-xl-none">{
           window.location.pathname.includes("blog")?
           <Nav.Link href="login"><BsPlusLg style={btn_style03}/></Nav.Link>:
           <Nav.Link><BsPlusLg style={btn_style02}/></Nav.Link>
