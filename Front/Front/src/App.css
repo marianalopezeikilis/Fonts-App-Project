@@ -1,3 +1,116 @@
+<<<<<<< HEAD
 .background_blog{
   background-color: #E8F0F2;
 } 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+/* HOME */
+
+.imgagua {
+width: 50px;
+height: 50px;
+margin:10px;
+}
+
+body .texthome .h1home button .containerhome{
+  font-family: 'Quicksand', sans-serif !important;
+}
+
+.containerhome {
+  background-color: #E8F0F2;
+  /* display: inline-block;
+  height: fit-content; */
+  height: 100vh;
+  display: flex;
+  align-items: center;
+ 
+}
+
+.colhome{
+  background-color: #E8F0F2;
+  text-align: center;
+  min-width: 260px;
+
+}
+
+/* BOTONES HOME */
+
+.btnfuente {
+justify-content: end;
+}
+
+.btnhome {
+margin:5px;
+} 
+
+
+#root {
+  padding:0px;
+}
+
+/* WEB */
+
+.divweb {
+  background-color: white;
+
+}
+>>>>>>> f89751e76dd2ce77522c3a9bead2bf17bb4490fc
+/* HOME */
+
+.imgagua {
+  width: 50px;
+  height: 50px;
+  margin:10px;
+  }
+  
+  body .texthome .h1home button .containerhome{
+    font-family: 'Quicksand', sans-serif !important;
+  }
+  
+  .containerhome {
+    background-color: #E8F0F2;
+    /* display: inline-block;
+    height: fit-content; */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+   
+  }
+  
+  .colhome{
+    background-color: #E8F0F2;
+    text-align: center;
+    min-width: 260px;
+  
+  }
+  
+  /* BOTONES HOME */
+  
+  .btnfuente {
+  justify-content: end;
+  }
+  
+  .btnhome {
+  margin:5px;
+  } 
+  
+  
+  #root {
+    padding:0px;
+  }
+  
+  /* WEB */
+  
+  .divweb {
+    background-color: white;
+  
+  }
+
+  .background_blog{
+    background-color: #E8F0F2;
+  } 
+=======
+>>>>>>> front-blog
+>>>>>>> main

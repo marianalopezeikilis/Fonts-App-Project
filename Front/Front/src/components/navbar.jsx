@@ -1,6 +1,13 @@
 import { Container, Nav, Navbar } from 'react-bootstrap';
+import { BsArrowLeftShort, BsPlusLg } from "react-icons/bs";
+import {Link} from 'react-router-dom';
+<<<<<<< HEAD
+import { BsArrowLeftShort, BsPlusLg } from "react-icons/bs";
+import {Link} from 'react-router-dom';
+=======
 import { BsArrowLeftShort, BsPlusLg} from "react-icons/bs";
 
+>>>>>>> front-blog
 import { useNavigate } from "react-router-dom";
 
 function NavBar() {
@@ -30,14 +37,26 @@ function NavBar() {
         }
         </Nav>
         <Nav className="m-auto">
+        <Navbar.Brand href="#home">
+          <Link to="/">
+            <img
+<<<<<<< HEAD
+          <Navbar.Brand href="#home">
+          <Link to="/">
+           <img
+=======
           <Navbar.Brand href=" ">
             <img
+>>>>>>> front-blog
               src="/img/logo01.png"
+
+              
               width="40"
               height="40"
               className="d-inline-block align-top"
               alt="React Bootstrap logo"
             />
+            </Link>
           </Navbar.Brand>
         </Nav>
         <Nav className="mr-auto d-xl-none">{
