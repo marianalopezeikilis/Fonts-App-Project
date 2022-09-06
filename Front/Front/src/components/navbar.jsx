@@ -1,6 +1,6 @@
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { BsArrowLeftShort, BsPlusLg } from "react-icons/bs";
-
+import {Link} from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 
 function NavBar() {
@@ -29,13 +29,17 @@ function NavBar() {
         </Nav>
         <Nav className="m-auto">
           <Navbar.Brand href="#home">
-            <img
+          <Link to="/">
+           <img
               src="/img/logo01.png"
+
+              
               width="40"
               height="40"
               className="d-inline-block align-top"
               alt="React Bootstrap logo"
             />
+            </Link>
           </Navbar.Brand>
         </Nav>
         <Nav className="mr-auto">
