@@ -1,15 +1,15 @@
 import NavBar from "./components/navbar.jsx";
 import { Button } from 'react-bootstrap';
 
-function BlogLogin() {
+function BlogAdd() {
 
   return (
     <>
         <NavBar/>
-        <h1>Login</h1>
-        <Button href="add">Login</Button>
+        <h1>Add</h1>
+        <Button href="blog">Add</Button>
     </>
   )
 }
 
-export default BlogLogin
+export default BlogAdd
