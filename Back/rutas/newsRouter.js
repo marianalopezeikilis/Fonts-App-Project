@@ -64,7 +64,7 @@ router.get('/:id', function (req, res, next) {
 // CREAR UNA NOVEDAD
 router.post('/', function (req, res, next) {
     sequelize.sync().then(() => {
-
+console.log(req.body);
         News.create(req.body)
             .then((item) => res.json({ ok: true, data: item }))
             .catch((error) => res.json({ ok: false, error: error.message }))
@@ -77,6 +77,54 @@ router.post('/', function (req, res, next) {
         })
     });
 });
+
+
+// MODIFICAR NOTICIA
+router.put('/:id', function (req, res, next) {
+    sequelize.sync().then(() => {
+
+        News.findOne({ where: { id: req.params.id } })
+            .then(news_modificada =>
+                news_modificada.update(req.body)
+            )
+            .then(news_modificada => res.json({
+                ok: true,
+                data: news_modificada
+            }))
+            .catch(error => res.json({
+                ok: false,
+                error: error.message
+            }));
+
+    }).catch((error) => {
+        res.json({
+            ok: false,
+            error: error.message
+        })
+    });
+});
+
+
+
+// ELIMINAR INFORMACION NOTICIA
+router.delete('/:id', function (req, res, next) {
+
+    sequelize.sync().then(() => {
+
+        News.destroy({ where: { id: req.params.id } })
+            .then((data) => res.json({ ok: true, data }))
+            .catch((error) => res.json({ ok: false, error }))
+
+    }).catch((error) => {
+        res.json({
+            ok: false,
+            error: error
+        })
+    });
+
+})
+
+
 ;
 
 export default router;
