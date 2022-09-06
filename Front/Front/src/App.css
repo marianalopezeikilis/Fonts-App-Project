@@ -1,48 +1,4 @@
-/* #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-} */
-
 /* HOME */
-
-
 
 .imgagua {
 width: 50px;
@@ -50,24 +6,25 @@ height: 50px;
 margin:10px;
 }
 
-body .texthome .h1home button .conthome .contconthome .app{
+body .texthome .h1home button .containerhome{
   font-family: 'Quicksand', sans-serif !important;
-
 }
 
-.conthome {
+.containerhome {
   background-color: #E8F0F2;
-  
+  /* display: inline-block;
+  height: fit-content; */
   height: 100vh;
+  display: flex;
+  align-items: center;
  
 }
 
-.contconthome{
-  padding: 200px;
-  height: 100vh;
+.colhome{
   background-color: #E8F0F2;
   text-align: center;
-  min-width: 200px;
+  min-width: 260px;
+
 }
 
 /* BOTONES HOME */
@@ -81,8 +38,13 @@ margin:5px;
 } 
 
 
-
-
 #root {
   padding:0px;
+}
+
+/* WEB */
+
+.divweb {
+  background-color: white;
+
 }
