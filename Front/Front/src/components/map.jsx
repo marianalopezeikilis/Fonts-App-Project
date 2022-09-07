@@ -51,7 +51,7 @@ function Map() {
 
 
         <MapContainer
-          center={{ lat: 51.505, lng: -0.09 }}
+          center={{ lat: 40.4167047, lng: -3.7035825 }}
           zoom={15}
           scrollWheelZoom={false}>
           <TileLayer
