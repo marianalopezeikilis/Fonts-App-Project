@@ -38643,6 +38643,7 @@
       "properties": {
         "@id": "node/4335947369",
         "amenity": "drinking_water",
+        "name": "Fuente del parque",
         "@timestamp": "2016-08-04T19:22:29Z",
         "@version": "1",
         "@changeset": "41244405",
