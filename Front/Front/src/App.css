@@ -20,6 +20,7 @@ body .texthome .h1home button .containerhome{
   height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
  
 }
 
@@ -102,5 +103,20 @@ margin:5px;
     background-color: white;
   
   }
-=======
->>>>>>> front-blog
+
+.card-img-top{
+  
+    align-self: center;
+  }
+
+.bodyblog {
+  background-color: #E8F0F2;
+  position:absolute;
+  top:0px;
+  right:0px;
+  bottom:0px;
+  left:0px;
+
+}
+
+
