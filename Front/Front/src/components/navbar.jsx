@@ -1,14 +1,7 @@
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { BsArrowLeftShort, BsPlusLg } from "react-icons/bs";
-import {Link} from 'react-router-dom';
-<<<<<<< HEAD
+import {Link, useNavigate} from 'react-router-dom';
 import { BsArrowLeftShort, BsPlusLg } from "react-icons/bs";
-import {Link} from 'react-router-dom';
-=======
-import { BsArrowLeftShort, BsPlusLg} from "react-icons/bs";
-
->>>>>>> front-blog
-import { useNavigate } from "react-router-dom";
 
 function NavBar() {
   const btn_style = { color: "E8F0F2", fontSize: "35px"}
@@ -40,14 +33,6 @@ function NavBar() {
         <Navbar.Brand href="#home">
           <Link to="/">
             <img
-<<<<<<< HEAD
-          <Navbar.Brand href="#home">
-          <Link to="/">
-           <img
-=======
-          <Navbar.Brand href=" ">
-            <img
->>>>>>> front-blog
               src="/img/logo01.png"
 
               
