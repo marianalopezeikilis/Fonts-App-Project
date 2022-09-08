@@ -1,13 +1,17 @@
 import NavBar from "./components/navbar.jsx";
-import { Button } from 'react-bootstrap';
+import ButtonBlue from "./components/ButtonBlue";
+import './Blog.css'
 
 
 function Blog() {
 
   return (
     <>
-        <NavBar/>
-        <div className="d-none d-xl-block" class="background_blog"><Button href="login">Login</Button></div>
+      <NavBar />
+      <div class="background_blog">
+        <div className="d-none d-xl-block"><ButtonBlue text="Login" ruta="/login" /></div>
+        
+      </div>
     </>
   )
 }
