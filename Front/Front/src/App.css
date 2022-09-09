@@ -48,7 +48,7 @@ margin:5px;
   background-color: white;
 
 }
->>>>>>> f89751e76dd2ce77522c3a9bead2bf17bb4490fc
+
 /* HOME */
 
 .imgagua {
@@ -100,9 +100,51 @@ margin:5px;
   
   }
 
+  /* BLOG */
+
   .background_blog{
     background-color: #E8F0F2;
+    
+  height: 100vh;
   } 
-=======
->>>>>>> front-blog
->>>>>>> main
+
+.background_login{
+    margin-top: 50%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: #053742;
+    border-radius: 10px;
+    padding: 4%;
+    text-align: center;
+}
+
+.login_text_color{
+  color: #E8F0F2;
+}
+
+.background_login_web{
+  margin-top: 15%;
+  margin-left: 30%;
+  margin-right: 30%;
+  background-color: #053742;
+  border-radius: 10px;
+  padding: 4%;
+  text-align: center;
+}
+
+.add_text_color{
+  color: #053742;
+}
+
+.add_position{
+  margin-top: 20px;
+}
+
+.add_position h1 {
+  color: #053742;
+  text-align: center;
+}
+
+.button_add_position{
+  text-align: center;
+}

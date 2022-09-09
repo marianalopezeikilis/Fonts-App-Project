@@ -1,6 +1,6 @@
 import NavBar from "./components/navbar.jsx";
 import ButtonBlue from "./components/ButtonBlue";
-import './Blog.css'
+import './App.css'
 
 
 function Blog() {
