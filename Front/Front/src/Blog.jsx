@@ -79,7 +79,7 @@ function Blog() {
     return <h3>No hi ha dades</h3>
   }
 
-  const lista = dades.map(el => <li key={el.id}>{el.titulo {el.articulo} <button onClick={() => elimina(el.id)}>X</button></li>);
+  const lista = dades.map(el => <li key={el.id}>{el.titulo} {el.articulo} <button onClick={() => elimina(el.id)}>X</button></li>);
 
 
 
