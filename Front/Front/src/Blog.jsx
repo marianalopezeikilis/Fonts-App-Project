@@ -9,7 +9,7 @@ function Blog() {
     <>
       <NavBar />
       <div class="background_blog">
-        <div className="d-none d-xl-block"><ButtonBlue text="Login" ruta="/login" /></div>
+        <div className="d-none d-xl-block"><ButtonBlue text="Add" ruta="/login" /></div>
         
       </div>
     </>
