@@ -17,6 +17,7 @@ body .texthome .h1home button .containerhome{
   height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
  
 }
 
@@ -100,9 +101,28 @@ margin:5px;
   
   }
 
+<<<<<<< HEAD
   .background_blog{
     background-color: #E8F0F2;
   } 
 =======
 >>>>>>> front-blog
 >>>>>>> main
+=======
+.card-img-top{
+  
+    align-self: center;
+  }
+
+.bodyblog {
+  background-color: #E8F0F2;
+  position:absolute;
+  top:0px;
+  right:0px;
+  bottom:0px;
+  left:0px;
+
+}
+
+
+>>>>>>> b9658cffe41acbaa5591ac482b891c18ef6a779f
