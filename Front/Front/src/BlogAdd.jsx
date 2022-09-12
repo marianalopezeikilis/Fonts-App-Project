@@ -8,6 +8,9 @@ import ImageUpload from "./ImageUpload.jsx";
 
 function BlogAdd() {
 
+  const [title, setTitle] = useState('');
+  const [subtitle, setSubtitle] = useState('');
+  const [text, settext] = useState('');
   const [img, setImg] = useState(null);
 
   return (
