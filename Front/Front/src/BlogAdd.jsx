@@ -20,7 +20,7 @@ function BlogAdd() {
     data.append('titulo', titulo);
     data.append('subtitulo', subtitulo);
     data.append('articulo', articulo);
-    data.append('img', img);
+    data.append('file', img);
 
     const opciones = {
       method: 'POST',
@@ -31,10 +31,10 @@ function BlogAdd() {
       .then(res => res.json())
       .then(res => {
         if (res.ok === true) {
-          toast.success("Article afegit");
+          //toast.success("Article afegit");
         } else {
           console.log(res);
-          toast.error("Error: " + res.error);
+          //toast.error("Error: " + res.error);
         }
       })
       .catch((err) => toast.error("Error: " + err.message));
