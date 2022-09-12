@@ -2,3 +2,7 @@
     width: 100vw;
     height: 100vh;
 }
+.marker {
+    padding-left: 100px;
+}
+.markercluster-map { height: 90vh; }
