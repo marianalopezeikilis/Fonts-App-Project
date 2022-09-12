@@ -5,10 +5,7 @@ import { sequelize } from "../loadSequelize.js";
 import News from '../Models/News.js';
 import multer from 'multer';
 
-<<<<<<< HEAD
-=======
 import multer from "multer";
->>>>>>> 14eabf85b449abf820a876d4b9936db7cfa08ed9
 
 //multer es un plugin que facilita la lectura de archivos procedentes de forms
 //aquí se inicializa, indicando que la carpeta es 'uploads'
