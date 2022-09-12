@@ -67,7 +67,8 @@ const [num, setNum] = useState(0);
         <Button className="btn-login" href="login">Login</Button>
       <div className=" containerimg">
 
-        <Row xs={1} md={2} xl={4} className="g-4 m-0">
+        <Row xs={1} md={2} 
+        xl={(dades.length>2 ? 4 : 2)} className="g-4 m-0">
 
         {lista} </Row>
       </div>
