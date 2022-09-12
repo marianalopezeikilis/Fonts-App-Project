@@ -1,6 +1,8 @@
 import { InputGroup, Button, Form } from 'react-bootstrap';
+import axios from 'axios';  
 
 function InputBlue(props) {
+
     return (
         <>
             <style type="text/css">
@@ -21,12 +23,16 @@ function InputBlue(props) {
   
     `}
             </style>
-            <InputGroup className="mb-3">
+            <Form.Group controlId="formFile" className="mb-3">
+                <Form.Control type="file" />
+            </Form.Group>
+
+            {/*}<InputGroup className="mb-3" type="file">
                 <Button variant="new" id="button-addon1">
                     {props.text}
                 </Button>
                 <Form.Control />
-            </InputGroup>
+            </InputGroup>{*/}
         </>
     );
 }
