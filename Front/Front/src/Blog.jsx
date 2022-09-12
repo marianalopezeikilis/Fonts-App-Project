@@ -1,11 +1,5 @@
 import NavBar from "./components/navbar.jsx";
-import { Button } from 'react-bootstrap';
-import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
 import "./App.css"
-import ButtonBlue from "./components/ButtonBlue";
-import './App.css'
 import { Button } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";

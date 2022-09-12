@@ -3,9 +3,6 @@ import { BsArrowLeftShort, BsPlusLg } from "react-icons/bs";
 import {Link, useNavigate} from 'react-router-dom';
 
 
-import {Link, useNavigate} from 'react-router-dom';
-
-
 
 function NavBar() {
   const btn_style = { color: "E8F0F2", fontSize: "35px" }
