@@ -1,39 +1,78 @@
 import NavBar from "./components/navbar.jsx";
-import { Button } from 'react-bootstrap';
-import Card from 'react-bootstrap/Card';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
-import "./App.css"
-import {Link} from 'react-router-dom';
+import { Button } from "react-bootstrap";
+import Card from "react-bootstrap/Card";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import "./App.css";
+import { useState, useEffect } from "react";
+
+
 
 function Blog() {
+  const [dades, setDades] = useState([]);
+const [error, setError] = useState("");
+const [num, setNum] = useState(0);
+  //Funcion para conectar con la api
 
-  return (
-    <div className="bodyblog">
-        <NavBar/>
-        <div className="d-none d-xl-block"><Button href="login">Login</Button></div>
-    
-     
+  function loadData() {
+    fetch("http://localhost:3000/api/news")
+      .then((resultat) => resultat.json())
+      .then((objecte_retornat) => {
+        if (objecte_retornat.ok === true) {
+          setDades(objecte_retornat.data);
+        } else {
+          setError(objecte_retornat.error);
+        }
+      })
+      .catch((error) => setError(error));
+  }
 
-    <Row xs={1} md={4} className="g-4 m-0">
-      {Array.from({ length: 4 }).map((_, idx) => (
+  useEffect(() => {
+    loadData();
+  }, []);
+
+  if (error !== "") {
+    return <h3>Error: {error.message} </h3>;
+  }
+
+  if (dades.length === 0) {
+    return <h3>No hi ha dades</h3>;
+  }
+
+
+  const lista = dades.map((el) => (
+    <div key={el.id}>
+
         <Col>
           <Card>
-            <Card.Img variant="top" src="/img/blog.jpg"  />
+            <Card.Img variant="top" src={el.img}  />
             <Card.Body>
-              <Card.Title>Mbappé se ríe del cambio climático mientras Francia se plantea prohibir los vuelos privados</Card.Title>
+              <Card.Title>{el.titulo}</Card.Title>
               <Card.Text>
-              El delantero y el entrenador del PSG ironizan con l aposibilidad de viajar «en barco de vela» su próximo desplazamiento tras ser preguntados por su viaje en avión a Nantes <Link to="/api/news/:id"><button>Ver mas</button> </Link>
-              </Card.Text> 
+              {el.subtitulo}
+               </Card.Text> 
             </Card.Body>
           </Card>
         </Col>
-      ))}
-    </Row>
-
+  
+   
+     
     </div>
+  ));
 
-  )
+
+  return (
+    <div className="bodyblog">
+      <NavBar />
+        <Button className="btn-login" href="login">Login</Button>
+      <div className=" containerimg">
+
+        <Row xs={1} md={2} xl={4} className="g-4 m-0">
+
+        {lista} </Row>
+      </div>
+    </div>
+  );
 }
 
-export default Blog
+export default Blog;
