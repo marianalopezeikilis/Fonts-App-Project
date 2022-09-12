@@ -18,7 +18,7 @@ body .texthome .h1home button .containerhome{
   display: flex;
   align-items: center;
   justify-content: center;
- 
+
 }
 
 .colhome{
@@ -151,9 +151,8 @@ margin:5px;
 .button_add_position{
   text-align: center;
 }
-<<<<<<< HEAD
-=======
-  
+
+
 
   /* BLOG */
 
@@ -218,7 +217,6 @@ bottom:0px;
 left:0px;
 
 }
->>>>>>> 5d7310d5c294f5cc6c0968882c88a848411611f0
 
 .card-img-top{
   
@@ -428,10 +426,3 @@ left:0px;
 .containerimg { 
   display:flex;
 }
-<<<<<<< HEAD
-
-.btn-login{
-
-}
-=======
->>>>>>> 5d7310d5c294f5cc6c0968882c88a848411611f0
