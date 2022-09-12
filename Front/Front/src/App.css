@@ -101,6 +101,58 @@ margin:5px;
   
   }
 
+
+
+  /* BLOG */
+
+  .background_blog{
+    background-color: #E8F0F2;
+    
+  height: 100vh;
+  } 
+
+  .background_login{
+    margin-top: 50%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: #053742;
+    border-radius: 10px;
+    padding: 4%;
+    text-align: center;
+}
+
+.login_text_color{
+  color: #E8F0F2;
+}
+
+.background_login_web{
+  margin-top: 15%;
+  margin-left: 30%;
+  margin-right: 30%;
+  background-color: #053742;
+  border-radius: 10px;
+  padding: 4%;
+  text-align: center;
+}
+
+.add_text_color{
+  color: #053742;
+}
+
+.add_position{
+  margin-top: 20px;
+}
+
+.add_position h1 {
+  color: #053742;
+  text-align: center;
+}
+
+.button_add_position{
+  text-align: center;
+}
+
+<<<<<<< HEAD
   
 
   /* BLOG */
@@ -167,6 +219,8 @@ left:0px;
 
 }
 
+=======
+>>>>>>> front-blog
 .card-img-top{
   
     align-self: center;
@@ -181,6 +235,81 @@ left:0px;
   left:0px;
 
 }
+
+
+.card-img-top{
+  
+  align-self: center;
+}
+.background_blog{
+  background-color: #E8F0F2;
+  
+height: 100vh;
+} 
+<<<<<<< HEAD
+=======
+
+
+  /* BLOG */
+
+  .background_blog{
+    background-color: #E8F0F2;
+    
+  height: 100vh;
+  } 
+
+>>>>>>> front-blog
+.background_login{
+    margin-top: 50%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: #053742;
+    border-radius: 10px;
+    padding: 4%;
+    text-align: center;
+}
+
+.login_text_color{
+  color: #E8F0F2;
+}
+
+.background_login_web{
+  margin-top: 15%;
+  margin-left: 30%;
+  margin-right: 30%;
+  background-color: #053742;
+  border-radius: 10px;
+  padding: 4%;
+  text-align: center;
+}
+
+.add_text_color{
+  color: #053742;
+}
+
+.add_position{
+  margin-top: 20px;
+}
+
+.add_position h1 {
+  color: #053742;
+  text-align: center;
+}
+
+.button_add_position{
+  text-align: center;
+<<<<<<< HEAD
+=======
+}
+
+
+/* BLOG */
+
+  .background_blog{
+    background-color: #E8F0F2;
+    
+  height: 100vh;
+  } 
 
 .background_login{
     margin-top: 50%;
@@ -221,4 +350,29 @@ left:0px;
 
 .button_add_position{
   text-align: center;
+}
+
+
+.card-img-top{
+  
+  align-self: center;
+}
+
+.bodyblog {
+background-color: #E8F0F2;
+position:absolute;
+top:0px;
+right:0px;
+bottom:0px;
+left:0px;
+
+}
+
+.containerimg { 
+  display:flex;
+}
+
+.btn-login{
+
+>>>>>>> front-blog
 }
