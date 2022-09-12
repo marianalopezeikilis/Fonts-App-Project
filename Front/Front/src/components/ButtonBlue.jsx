@@ -25,7 +25,7 @@ function ButtonBlue(props) {
   
     `}
       </style>
-      <Link to={props.ruta}>
+      <Link to={props.ruta} replace>
       <Button  variant="celeste" size="xl">
         {props.text}
       </Button>
