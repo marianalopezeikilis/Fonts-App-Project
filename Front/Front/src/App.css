@@ -151,8 +151,6 @@ margin:5px;
 .button_add_position{
   text-align: center;
 }
-
-<<<<<<< HEAD
   
 
   /* BLOG */
@@ -219,8 +217,6 @@ left:0px;
 
 }
 
-=======
->>>>>>> front-blog
 .card-img-top{
   
     align-self: center;
@@ -246,8 +242,6 @@ left:0px;
   
 height: 100vh;
 } 
-<<<<<<< HEAD
-=======
 
 
   /* BLOG */
@@ -258,7 +252,6 @@ height: 100vh;
   height: 100vh;
   } 
 
->>>>>>> front-blog
 .background_login{
     margin-top: 50%;
     margin-left: 5%;
@@ -298,8 +291,6 @@ height: 100vh;
 
 .button_add_position{
   text-align: center;
-<<<<<<< HEAD
-=======
 }
 
 
@@ -370,9 +361,4 @@ left:0px;
 
 .containerimg { 
   display:flex;
-}
-
-.btn-login{
-
->>>>>>> front-blog
 }
