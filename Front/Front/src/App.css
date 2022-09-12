@@ -139,7 +139,7 @@ margin:5px;
 .login_text_color{
   color: #E8F0F2;
 }
-
+/* 
 .background_login_web{
   margin-top: 15%;
   margin-left: 30%;
@@ -148,7 +148,7 @@ margin:5px;
   border-radius: 10px;
   padding: 4%;
   text-align: center;
-}
+} */
 
 .add_text_color{
   color: #053742;
@@ -191,9 +191,9 @@ margin:5px;
 }
 
 .background_login_web{
-  margin-top: 15%;
+  /* margin-top: 15%;
   margin-left: 30%;
-  margin-right: 30%;
+  margin-right: 30%; */
   background-color: #053742;
   border-radius: 10px;
   padding: 4%;
@@ -239,4 +239,12 @@ left:0px;
 
 .btn-login{
 
+}
+
+.containerlogin {
+
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
