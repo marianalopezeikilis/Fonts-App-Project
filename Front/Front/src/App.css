@@ -151,6 +151,74 @@ margin:5px;
 .button_add_position{
   text-align: center;
 }
+<<<<<<< HEAD
+=======
+  
+
+  /* BLOG */
+
+  .background_blog{
+    background-color: #E8F0F2;
+    
+  height: 100vh;
+  } 
+
+  .background_login{
+    margin-top: 50%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: #053742;
+    border-radius: 10px;
+    padding: 4%;
+    text-align: center;
+}
+
+.login_text_color{
+  color: #E8F0F2;
+}
+
+.background_login_web{
+  margin-top: 15%;
+  margin-left: 30%;
+  margin-right: 30%;
+  background-color: #053742;
+  border-radius: 10px;
+  padding: 4%;
+  text-align: center;
+}
+
+.add_text_color{
+  color: #053742;
+}
+
+.add_position{
+  margin-top: 20px;
+}
+
+.add_position h1 {
+  color: #053742;
+  text-align: center;
+}
+
+.button_add_position{
+  text-align: center;
+}
+
+.card-img-top{
+  
+  align-self: center;
+}
+
+.bodyblog {
+background-color: #E8F0F2;
+position:absolute;
+top:0px;
+right:0px;
+bottom:0px;
+left:0px;
+
+}
+>>>>>>> 5d7310d5c294f5cc6c0968882c88a848411611f0
 
 .card-img-top{
   
@@ -167,6 +235,69 @@ margin:5px;
 
 }
 
+  /* BLOG */
+
+  .background_blog{
+    background-color: #E8F0F2;
+    
+  height: 100vh;
+  } 
+
+  .background_login{
+    margin-top: 50%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: #053742;
+    border-radius: 10px;
+    padding: 4%;
+    text-align: center;
+}
+
+.login_text_color{
+  color: #E8F0F2;
+}
+
+.background_login_web{
+  margin-top: 15%;
+  margin-left: 30%;
+  margin-right: 30%;
+  background-color: #053742;
+  border-radius: 10px;
+  padding: 4%;
+  text-align: center;
+}
+
+.add_text_color{
+  color: #053742;
+}
+
+.add_position{
+  margin-top: 20px;
+}
+
+.add_position h1 {
+  color: #053742;
+  text-align: center;
+}
+
+.button_add_position{
+  text-align: center;
+}
+
+.card-img-top{
+  
+  align-self: center;
+}
+
+.bodyblog {
+background-color: #E8F0F2;
+position:absolute;
+top:0px;
+right:0px;
+bottom:0px;
+left:0px;
+
+}
 
 .card-img-top{
   
@@ -297,7 +428,10 @@ left:0px;
 .containerimg { 
   display:flex;
 }
+<<<<<<< HEAD
 
 .btn-login{
 
 }
+=======
+>>>>>>> 5d7310d5c294f5cc6c0968882c88a848411611f0
