@@ -1,10 +1,14 @@
+import {useState} from "react";
 import NavBar from "./components/navbar.jsx";
 import ButtonBlue from "./components/ButtonBlue";
 import InputBlue from "./components/InputBlue";
 import './App.css'
 import { Form, Container, Row, Col } from 'react-bootstrap';
+import ImageUpload from "./ImageUpload.jsx";
 
 function BlogAdd() {
+
+  const [img, setImg] = useState(null);
 
   return (
     <div class="background_blog">
@@ -27,9 +31,9 @@ function BlogAdd() {
                   <Form.Label class="add_text_color">Text</Form.Label>
                   <Form.Control as="textarea" rows={6} />
                 </Form.Group>
+                
+                <ImageUpload useFoto={[img, setImg]} />
               </Form>
-              <InputBlue text="Add img 1"></InputBlue>
-              <InputBlue text="Add img 2"></InputBlue>
               <div class="button_add_position">  <ButtonBlue text="Add" ruta="/blog" /></div>
             </div>
           </Col>
