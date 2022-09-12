@@ -6,39 +6,91 @@ import Row from 'react-bootstrap/Row';
 import "./App.css"
 import ButtonBlue from "./components/ButtonBlue";
 import './App.css'
+<<<<<<< HEAD
+import { Button } from 'react-bootstrap';
+import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
+import "./App.css"
+import ButtonBlue from "./components/ButtonBlue";
+import './App.css'
+=======
+import { Button } from "react-bootstrap";
+import Card from "react-bootstrap/Card";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
+import "./App.css";
+import { useState, useEffect } from "react";
+
+
+>>>>>>> front-blog
 
 function Blog() {
+  const [dades, setDades] = useState([]);
+const [error, setError] = useState("");
+const [num, setNum] = useState(0);
+  //Funcion para conectar con la api
+
+  function loadData() {
+    fetch("http://localhost:3000/api/news")
+      .then((resultat) => resultat.json())
+      .then((objecte_retornat) => {
+        if (objecte_retornat.ok === true) {
+          setDades(objecte_retornat.data);
+        } else {
+          setError(objecte_retornat.error);
+        }
+      })
+      .catch((error) => setError(error));
+  }
+
+  useEffect(() => {
+    loadData();
+  }, []);
+
+  if (error !== "") {
+    return <h3>Error: {error.message} </h3>;
+  }
+
+  if (dades.length === 0) {
+    return <h3>No hi ha dades</h3>;
+  }
+
+
+  const lista = dades.map((el) => (
+    <div key={el.id}>
+
+        <Col>
+          <Card>
+            <Card.Img variant="top" src={el.img}  />
+            <Card.Body>
+              <Card.Title>{el.titulo}</Card.Title>
+              <Card.Text>
+              {el.subtitulo}
+               </Card.Text> 
+            </Card.Body>
+          </Card>
+        </Col>
+  
+   
+     
+    </div>
+  ));
+
 
   return (
-
     <div className="bodyblog">
-      {/*} 
-Esta class està en blog.css
-<div class="background_blog">{*/}
       <NavBar />
-      <div className="d-none d-xl-block"><ButtonBlue text="Add" ruta="/login" /></div>
+        <Button className="btn-login" href="login">Login</Button>
+      <div className=" containerimg">
 
+        <Row xs={1} md={2} 
+        xl={(dades.length>2 ? 4 : 2)} className="g-4 m-0">
 
-
-      <Row xs={1} md={4} className="g-4 m-0">
-        {Array.from({ length: 4 }).map((_, idx) => (
-          <Col>
-            <Card>
-              <Card.Img variant="top" src="/img/blog.jpg" />
-              <Card.Body>
-                <Card.Title>Mbappé se ríe del cambio climático mientras Francia se plantea prohibir los vuelos privados</Card.Title>
-                <Card.Text>
-                  El delantero y el entrenador del PSG ironizan con l aposibilidad de viajar «en barco de vela» su próximo desplazamiento tras ser preguntados por su viaje en avión a Nantes <Link to="/api/news/:id"><button>Ver mas</button> </Link>
-                </Card.Text>
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
-      </Row>
-
+        {lista} </Row>
+      </div>
     </div>
-
-  )
+  );
 }
 
-export default Blog
+export default Blog;
