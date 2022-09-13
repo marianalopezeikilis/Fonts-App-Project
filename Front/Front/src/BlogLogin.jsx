@@ -21,8 +21,15 @@ function BlogLogin() {
                 <Form.Control type="password" placeholder="Password" />
               </Form.Group>
               <ButtonBlue text="Login" ruta="/add" />
+              </Form> 
+            </Col>*/}
+<<<<<<< HEAD
             </Form> 
             </Col>*/}
+=======
+            </Form> */}
+            {/* </Col> */}
+>>>>>>> 929a39a10b979a1db21d42df423870d60b105df5
           </Row>
   
       </Container>
