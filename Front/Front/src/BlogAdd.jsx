@@ -3,7 +3,7 @@ import NavBar from "./components/navbar.jsx";
 import ButtonBlue from "./components/ButtonBlue";
 import InputBlue from "./components/InputBlue";
 import './App.css'
-import { Form, Container, Row, Col } from 'react-bootstrap';
+import { Form, Container, Row, Col, Button } from 'react-bootstrap';
 import ImageUpload from "./ImageUpload.jsx";
 
 function BlogAdd() {
@@ -43,6 +43,27 @@ function BlogAdd() {
 
   return (
     <div class="background_blog">
+      <style type="text/css">
+        {`
+    .btn-celeste {
+      background-color: #93BFD7;
+      color: white;
+      margin:5px;
+      width: 100%;
+ max-width: 150px;
+ box-sizing: border-box;
+ box-shadow: 2px 2px 5px #888888;
+ border:none;
+
+    }
+    .btn-celeste:hover {
+  background-color: #39A2DB;  
+  border:none;
+  color: white;
+}
+  
+    `}
+      </style>
       <NavBar />
       <Container>
         <Row className="justify-content-center">
@@ -63,7 +84,7 @@ function BlogAdd() {
                   <Form.Control as="textarea" rows={6} value={articulo} onInput={(e) => setArticulo(e.target.value)} />
                 </Form.Group>
                 <ImageUpload useFoto={[img, setImg]} />
-                <button type="submit">{"Add"}</button>
+                <Button type="submit" variant="celeste">{"Add"}</Button>
                 {/*He canvait el Button Blue per un button normal per fer proves en el  uw hi havia text="Add" ruta="/blog"*/}
               </Form>
             </div>
