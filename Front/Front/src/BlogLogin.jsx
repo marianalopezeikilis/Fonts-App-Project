@@ -22,7 +22,7 @@ function BlogLogin() {
               </Form.Group>
               <ButtonBlue text="Login" ruta="/add" />
             </Form> */}
-            </Col>
+            {/* </Col> */}
           </Row>
   
       </Container>
