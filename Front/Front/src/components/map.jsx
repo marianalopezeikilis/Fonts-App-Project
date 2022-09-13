@@ -70,7 +70,7 @@ function Map() {
             const { name } = properties;
     
             if ( !name ) return;
-    
+
             layer.bindPopup(`<p>${name}</p>`);}}
             ></GeoJSON>
           </MarkerClusterGroup>
