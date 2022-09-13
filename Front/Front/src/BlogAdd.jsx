@@ -1,7 +1,6 @@
 import { useState } from "react";
 import NavBar from "./components/navbar.jsx";
-import ButtonBlue from "./components/ButtonBlue";
-import InputBlue from "./components/InputBlue";
+import { Link } from 'react-router-dom';
 import './App.css'
 import { Form, Container, Row, Col, Button } from 'react-bootstrap';
 import ImageUpload from "./ImageUpload.jsx";
@@ -64,33 +63,36 @@ function BlogAdd() {
   
     `}
       </style>
-      <NavBar />
-      <Container>
-        <Row className="justify-content-center">
-          <Col xs="10" md="10" lg="8" >
-            <div class="add_position">
-              <h1>New Post</h1>
-              <Form onSubmit={submit}>
-                <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                  <Form.Label class="add_text_color">Title</Form.Label>
-                  <Form.Control type="text" placeholder="Title" value={titulo} onInput={(e) => setTitulo(e.target.value)} />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
-                  <Form.Label class="add_text_color">Subtitle</Form.Label>
-                  <Form.Control type="text" placeholder="Subtitle" value={subtitulo} onInput={(e) => setSubtitulo(e.target.value)} />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                  <Form.Label class="add_text_color">Text</Form.Label>
-                  <Form.Control as="textarea" rows={6} value={articulo} onInput={(e) => setArticulo(e.target.value)} />
-                </Form.Group>
-                <ImageUpload useFoto={[img, setImg]} />
-                <Button type="submit" variant="celeste">{"Add"}</Button>
-                {/*He canvait el Button Blue per un button normal per fer proves en el  uw hi havia text="Add" ruta="/blog"*/}
-              </Form>
-            </div>
-          </Col>
-        </Row>
-      </Container>
+      <div class="background_add">
+        <NavBar />
+        <Container>
+          <Row className="justify-content-center">
+            <Col xs="10" md="10" lg="8" >
+              <div class="add_position">
+                <h1>New Post</h1>
+                <Form onSubmit={submit}>
+                  <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                    <Form.Label class="add_text_color">Title</Form.Label>
+                    <Form.Control type="text" placeholder="Title" value={titulo} onInput={(e) => setTitulo(e.target.value)} />
+                  </Form.Group>
+                  <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
+                    <Form.Label class="add_text_color">Subtitle</Form.Label>
+                    <Form.Control type="text" placeholder="Subtitle" value={subtitulo} onInput={(e) => setSubtitulo(e.target.value)} />
+                  </Form.Group>
+                  <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                    <Form.Label class="add_text_color">Text</Form.Label>
+                    <Form.Control as="textarea" rows={6} value={articulo} onInput={(e) => setArticulo(e.target.value)} />
+                  </Form.Group>
+                  <ImageUpload useFoto={[img, setImg]} />
+                  <Link to="/blog">
+                    <Button type="submit" variant="celeste">{"Add"}</Button>
+                  </Link>
+                </Form>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
     </div>
   )
 }

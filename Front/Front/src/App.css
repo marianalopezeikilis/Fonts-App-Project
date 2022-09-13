@@ -107,8 +107,8 @@ margin:5px;
 
   .background_blog{
     background-color: #E8F0F2;
+    height: fit-content;
     
-  height: 100vh;
   } 
 
   .background_login{
@@ -204,6 +204,11 @@ left:0px;
   border-radius: 10px;
   padding: 4%;
   text-align: center;
+}
+
+.background_add{
+  background-color: #E8F0F2;
+  height: 100vh;
 }
 
 .add_text_color{
