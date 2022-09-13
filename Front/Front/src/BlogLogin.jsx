@@ -10,7 +10,7 @@ function BlogLogin() {
       <NavBar />
       <Container fluid className="containerhome">
           <Row className="justify-content-center">
-          {/* <Col xs="2" md="2" lg="4" className='background_login_web'>
+          <Col xs="2" md="2" lg="4" className="colhome background_login_web">
             <Form>
               <Form.Group className="mb-3" controlId="formBasicText">
                 <Form.Label class="login_text_color">Username</Form.Label>
@@ -21,17 +21,9 @@ function BlogLogin() {
                 <Form.Control type="password" placeholder="Password" />
               </Form.Group>
               <ButtonBlue text="Login" ruta="/add" />
-              </Form> 
-            </Col>*/}
-<<<<<<< HEAD
-            </Form> 
-            </Col>*/}
-=======
-            </Form> */}
-            {/* </Col> */}
->>>>>>> 929a39a10b979a1db21d42df423870d60b105df5
+            </Form>
+            </Col>
           </Row>
-  
       </Container>
     </div>
   )
