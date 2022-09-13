@@ -6,7 +6,7 @@ import MarkerClusterGroup from '@changey/react-leaflet-markercluster';
 import 'react-leaflet-markercluster/dist/styles.min.css';
 import 'leaflet/dist/leaflet.css';
 import Ubicacion from './images/miUbi.png';
-import Fuentes from './FuentesCat.json';
+import Fuentes from './Fuentes1.json';
 import FuenteIco from './images/logo02.png';
 
 function Map() {
