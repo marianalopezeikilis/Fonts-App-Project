@@ -3,9 +3,9 @@ import { render } from 'react-dom';
 import { useState } from "react";
 import './map.css';
 import 'leaflet/dist/leaflet.css';
-import Ubicacion from './images/miUbi.png';
+//import Ubicacion from './images/miUbi.png';
 import Fuentes from './FuentesCat(zip).json';
-import FuenteIco from './images/logo02.png';
+//import FuenteIco from './images/logo02.png';
 
 
 
