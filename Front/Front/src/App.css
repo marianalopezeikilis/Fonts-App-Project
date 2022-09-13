@@ -208,7 +208,10 @@ left:0px;
 
 .background_add{
   background-color: #E8F0F2;
-  height: 100vh;
+  height: auto;
+}
+.container_add{
+  height: 100vh; 
 }
 
 .add_text_color{
