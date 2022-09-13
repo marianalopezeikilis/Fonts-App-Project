@@ -5,15 +5,19 @@ import { Form } from 'react-bootstrap';
 
 
 const Preview = styled.img`
-    padding: 8px;
     margin-top: 12px;
-    background-color: #ccc;
-    border-radius: 4px;
-    height: 100px;
-    margin: auto;
-    display: block;
+    height: 150px;
+    margin-left: 50px;
+    margin-top: -50px;
+    position: absolute;
 `;
 
+const Preview2 = styled.img`
+    height: 150px;
+    margin-bottom: -30px;
+    display: block;
+    margin-top: 5px;
+`;
 
 
 function ImageUpload({ useFoto }) {
@@ -49,15 +53,17 @@ function ImageUpload({ useFoto }) {
       <label className="d-none d-md-block">
         <Form.Group controlId="formFile" className="mb-3">
           <Form.Label>Photo</Form.Label>
-          <Form.Control type="file" name="file" onChange={onSelectFile} />
-          {selectedFile && <Preview src={preview} />}
+          <br/>
+          <label><Form.Control type="file" name="file" onChange={onSelectFile} /></label>
+          <label>{selectedFile && <Preview src={preview} />}</label>
         </Form.Group>
       </label>
       <label className="d-md-none">
         <Form.Group controlId="formFile" className="mb-3">
           <Form.Label>Photo</Form.Label>
-          <Form.Control type="file" name="file" onChange={onSelectFile} />
-          {selectedFile && <Preview src={preview} />}
+          <br/>
+          <label><Form.Control type="file" name="file" onChange={onSelectFile} /></label>
+          <label>{selectedFile && <Preview2 src={preview} />}</label>
         </Form.Group>
       </label>
     </>

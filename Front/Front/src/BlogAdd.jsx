@@ -81,7 +81,7 @@ function BlogAdd() {
                   </Form.Group>
                   <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                     <Form.Label class="add_text_color">Text</Form.Label>
-                    <Form.Control as="textarea" rows={6} value={articulo} onInput={(e) => setArticulo(e.target.value)} />
+                    <Form.Control as="textarea" rows={4} value={articulo} onInput={(e) => setArticulo(e.target.value)} />
                   </Form.Group>
                   <ImageUpload useFoto={[img, setImg]} />
                   <Link to="/blog">
