@@ -8,9 +8,9 @@ function BlogLogin() {
   return (
     <div class="background_blog">
       <NavBar />
-      <Container className="d-none d-md-block">
-        <div class="background_login_web" >
+      <Container fluid className="containerhome">
           <Row className="justify-content-center">
+          {/* <Col xs="2" md="2" lg="4" className='background_login_web'>
             <Form>
               <Form.Group className="mb-3" controlId="formBasicText">
                 <Form.Label class="login_text_color">Username</Form.Label>
@@ -21,24 +21,10 @@ function BlogLogin() {
                 <Form.Control type="password" placeholder="Password" />
               </Form.Group>
               <ButtonBlue text="Login" ruta="/add" />
-            </Form>
+            </Form> */}
+            </Col>
           </Row>
-        </div>
-      </Container>
-      <Container className="d-md-none">
-        <div class="background_login" >
-          <Form>
-            <Form.Group className="mb-3" controlId="formBasicText">
-              <Form.Label class="login_text_color">Username</Form.Label>
-              <Form.Control type="text" placeholder="Enter username" />
-            </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label class="login_text_color">Password</Form.Label>
-              <Form.Control type="password" placeholder="Password" />
-            </Form.Group>
-            <ButtonBlue text="Login" ruta="/add" />
-          </Form>
-        </div>
+  
       </Container>
     </div>
   )
