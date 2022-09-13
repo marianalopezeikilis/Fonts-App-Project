@@ -21,8 +21,8 @@ function BlogLogin() {
                 <Form.Control type="password" placeholder="Password" />
               </Form.Group>
               <ButtonBlue text="Login" ruta="/add" />
-            </Form> */}
-            </Col>
+            </Form> 
+            </Col>*/}
           </Row>
   
       </Container>
