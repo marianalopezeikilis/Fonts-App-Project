@@ -3,12 +3,9 @@ import { render } from 'react-dom';
 import { useState } from "react";
 import './map.css';
 import 'leaflet/dist/leaflet.css';
-<<<<<<< HEAD
-=======
 import Ubicacion from './images/miUbi.png';
 import Fuentes from './FuentesCat(zip).json';
 import FuenteIco from './images/logo02.png';
->>>>>>> af808fdb4cd8aa90f77119b519cfcf2b9e3f8b95
 
 
 
