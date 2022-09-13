@@ -33,13 +33,7 @@ function Map() {
     return (
         <>
         <MapContainer
-<<<<<<< HEAD
-          center={{ lat: 51.505, lng: -0.09 }}
-          zoom={13}
-=======
-          center={{ lat: 51.50853, lng: -0.12574 }}
-          zoom={15}
->>>>>>> af808fdb4cd8aa90f77119b519cfcf2b9e3f8b95
+         
           scrollWheelZoom={false}>
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
