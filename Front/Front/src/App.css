@@ -18,7 +18,7 @@ body .texthome .h1home button .containerhome{
   display: flex;
   align-items: center;
   justify-content: center;
- 
+
 }
 
 .colhome{
@@ -151,7 +151,8 @@ margin:5px;
 .button_add_position{
   text-align: center;
 }
-  
+
+
 
   /* BLOG */
 
@@ -232,6 +233,69 @@ left:0px;
 
 }
 
+  /* BLOG */
+
+  .background_blog{
+    background-color: #E8F0F2;
+    
+  height: 100vh;
+  } 
+
+  .background_login{
+    margin-top: 50%;
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: #053742;
+    border-radius: 10px;
+    padding: 4%;
+    text-align: center;
+}
+
+.login_text_color{
+  color: #E8F0F2;
+}
+
+.background_login_web{
+  margin-top: 15%;
+  margin-left: 30%;
+  margin-right: 30%;
+  background-color: #053742;
+  border-radius: 10px;
+  padding: 4%;
+  text-align: center;
+}
+
+.add_text_color{
+  color: #053742;
+}
+
+.add_position{
+  margin-top: 20px;
+}
+
+.add_position h1 {
+  color: #053742;
+  text-align: center;
+}
+
+.button_add_position{
+  text-align: center;
+}
+
+.card-img-top{
+  
+  align-self: center;
+}
+
+.bodyblog {
+background-color: #E8F0F2;
+position:absolute;
+top:0px;
+right:0px;
+bottom:0px;
+left:0px;
+
+}
 
 .card-img-top{
   
@@ -265,7 +329,7 @@ height: 100vh;
 .login_text_color{
   color: #E8F0F2;
 }
-
+/* 
 .background_login_web{
   margin-top: 15%;
   margin-left: 30%;
@@ -274,7 +338,7 @@ height: 100vh;
   border-radius: 10px;
   padding: 4%;
   text-align: center;
-}
+} */
 
 .add_text_color{
   color: #053742;
@@ -317,9 +381,9 @@ height: 100vh;
 }
 
 .background_login_web{
-  margin-top: 15%;
+  /* margin-top: 15%;
   margin-left: 30%;
-  margin-right: 30%;
+  margin-right: 30%; */
   background-color: #053742;
   border-radius: 10px;
   padding: 4%;
@@ -360,5 +424,13 @@ left:0px;
 }
 
 .containerimg { 
-  display:flex;
+  display:flex;}
+
+
+.containerlogin {
+
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
