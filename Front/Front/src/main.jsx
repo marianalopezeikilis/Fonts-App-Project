@@ -7,6 +7,7 @@ import App from './App'
 import Blog from "./Blog";
 import BlogLogin from "./BlogLogin";
 import BlogAdd from "./BlogAdd";
+import ShowFont from './ShowFont';
 
 //hola
 
@@ -17,6 +18,7 @@ ReactDOM.render(
       <Route path="home" element={<App />}/>
       <Route path="blog" element={<Blog />} />
       <Route path="login" element={<BlogLogin />} />
+      <Route path="showfont" element={<ShowFont />} />
       <Route path="add" element={<BlogAdd />} />
     </Routes>
   </BrowserRouter>,
