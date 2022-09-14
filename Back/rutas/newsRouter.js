@@ -1,6 +1,6 @@
 import express from 'express';
 
-import {sequelize} from "../loadSequelize.js";
+import { sequelize } from "../loadSequelize.js";
 
 import News from '../Models/News.js';
 import multer from 'multer';
@@ -35,7 +35,7 @@ router.get('/', function (req, res, next) {
         News.findAll()
             .then(news => res.json({
                 ok: true,
-                data:   news
+                data: news
             }))
             .catch(error => res.json({
                 ok: false,
@@ -55,7 +55,7 @@ router.get('/', function (req, res, next) {
 router.get('/:id', function (req, res, next) {
     sequelize.sync().then(() => {
 
-        News.findOne({ where: { id: req.params.id }})
+        News.findOne({ where: { id: req.params.id } })
             .then(al => res.json({
                 ok: true,
                 data: al
@@ -77,7 +77,7 @@ router.get('/:id', function (req, res, next) {
 // CREAR UNA NOVEDAD
 router.post('/', function (req, res, next) {
     sequelize.sync().then(() => {
-console.log(req.body);
+        console.log(req.body);
         News.create(req.body)
             .then((item) => res.json({ ok: true, data: item }))
             .catch((error) => res.json({ ok: false, error: error.message }))
@@ -138,7 +138,7 @@ router.delete('/:id', function (req, res, next) {
 })
 
 
-;
+    ;
 
 export default router;
 
