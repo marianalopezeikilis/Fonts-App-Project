@@ -2,16 +2,8 @@ import NavBar from "./components/navbar.jsx";
 import ButtonBlue from "./components/ButtonBlue";
 import { Button, Card, Col, Row } from "react-bootstrap";
 import "./App.css";
-<<<<<<< HEAD
-import { Button } from "react-bootstrap";
-import Card from "react-bootstrap/Card";
-import Col from "react-bootstrap/Col";
-import Row from "react-bootstrap/Row";
-import "./App.css";
-=======
 import ButtonBlue from "./components/ButtonBlue";
 import { Button, Card, Col, Row } from "react-bootstrap";
->>>>>>> add_new
 import { useState, useEffect } from "react";
 
 
