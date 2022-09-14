@@ -75,7 +75,7 @@ router.get('/:id', function (req, res, next) {
 
 
 // CREAR UNA NOVEDAD
-router.post('/', function (req, res, next) {
+router.post('/xxx', function (req, res, next) {
     sequelize.sync().then(() => {
         console.log(req.body);
         News.create(req.body)
@@ -90,6 +90,41 @@ router.post('/', function (req, res, next) {
         })
     });
 });
+
+//POST AMB FOTO
+
+router.post('/', (req, res, next) => {
+
+    upload(req, res, function (err) {
+        if (err) {
+            return res.status(500).json(err)
+        }
+
+        if (!req.file) {
+            res.status(400).json({ ok: false, error: "dades incomplertes" });
+        } else {
+
+            const noticia = req.body;
+            noticia.img = req.file.filename;
+
+            sequelize.sync().then(() => {
+                console.log(noticia);
+                News.create(noticia)
+                    .then((item) => res.json({ ok: true, data: item }))
+                    .catch((error) => res.json({ ok: false, error: error.message }))
+
+
+            }).catch((error) => {
+                res.json({
+                    ok: false,
+                    error: error.message
+                })
+            });
+        }
+    })
+
+});
+
 
 
 // MODIFICAR NOTICIA
@@ -141,5 +176,3 @@ router.delete('/:id', function (req, res, next) {
     ;
 
 export default router;
-
-
