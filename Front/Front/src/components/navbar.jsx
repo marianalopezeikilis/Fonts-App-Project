@@ -20,7 +20,7 @@ function NavBar() {
     </style>
     <Navbar variant="newcolor">
       <Container>
-        <Nav className="ml-auto d-xl-none" >
+        <Nav>
           {
             window.location.pathname.includes("add" || "login") ?
               <Nav.Link href="blog"><BsArrowLeftShort style={btn_style} /></Nav.Link> :
@@ -40,7 +40,7 @@ function NavBar() {
             />
           </Navbar.Brand>
         </Nav>
-        <Nav className="mr-auto d-xl-none">{
+        <Nav>{
           window.location.pathname.includes("blog") ?
             <Nav.Link href="login"><BsPlusLg style={btn_style03} /></Nav.Link> :
             <Nav.Link><BsPlusLg style={btn_style02} /></Nav.Link>

@@ -62,7 +62,6 @@ const [num, setNum] = useState(0);
   return (
     <div className="bodyblog">
       <NavBar />
-        <Button className="btn-login" href="login">Login</Button>
       <div className=" containerimg">
 
         <Row xs={1} md={2} 
