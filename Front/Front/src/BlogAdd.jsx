@@ -5,6 +5,7 @@ import InputBlue from "./components/InputBlue";
 import './App.css'
 import { Form, Container, Row, Col, Button } from 'react-bootstrap';
 import ImageUpload from "./ImageUpload.jsx";
+import { Link } from 'react-router-dom';
 
 function BlogAdd() {
 
@@ -84,9 +85,10 @@ function BlogAdd() {
                   <Form.Control as="textarea" rows={6} value={articulo} onInput={(e) => setArticulo(e.target.value)} />
                 </Form.Group>
                 <ImageUpload useFoto={[img, setImg]} />
-                <Button type="submit" variant="celeste">{"Add"}</Button>
-                {/*He canvait el Button Blue per un button normal per fer proves en el  uw hi havia text="Add" ruta="/blog"*/}
-              </Form>
+                <Link to="blog" replace>
+                  <Button type="submit" variant="celeste">{"Add"}</Button>
+                </Link>
+                </Form>
             </div>
           </Col>
         </Row>
