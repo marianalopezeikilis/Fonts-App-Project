@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@changey/react-leaflet-markercluster": "^4.0.0-rc1",
     "axios": "^0.24.0",
     "bootstrap": "^5.2.0",
     "bootstrap-icons": "^1.9.1",
