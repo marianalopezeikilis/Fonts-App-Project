@@ -61,6 +61,7 @@ const [num, setNum] = useState(0);
 
   return (
     <div className="bodyblog">
+      <div className="background_add_02">
       <NavBar />
       <div className=" containerimg">
 
@@ -68,6 +69,7 @@ const [num, setNum] = useState(0);
         xl={(dades.length>2 ? 4 : 2)} className="g-4 m-0">
 
         {lista} </Row>
+      </div>
       </div>
     </div>
   );
