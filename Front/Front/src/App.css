@@ -172,9 +172,13 @@ margin:5px;
 
   .background_blog{
     background-color: #E8F0F2;
-    
-  height: 100vh;
+    height: 100vh;
   } 
+
+  .background_add_02{
+    background-color: #E8F0F2;
+    height: auto;
+  }
 
 .background_login{
     margin-top: 50%;
@@ -215,6 +219,12 @@ margin:5px;
 
 .button_add_position{
   text-align: center;
+}
+
+.button_add_center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 

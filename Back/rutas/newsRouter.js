@@ -3,6 +3,39 @@ import express from 'express';
 import {sequelize} from "../loadSequelize.js";
 
 import News from '../Models/News.js';
+import multer from 'multer';
+
+//multer es un plugin que facilita la lectura de archivos procedentes de forms
+//aquí se inicializa, indicando que la carpeta es 'uploads'
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, 'uploads')
+    },
+    filename: function (req, file, cb) {
+        cb(null, Date.now() + '-' + file.originalname)
+    }
+})
+
+const upload = multer({ storage: storage }).single('file');
+
+<<<<<<< HEAD
+=======
+import multer from 'multer';
+
+//multer es un plugin que facilita la lectura de archivos procedentes de forms
+//aquí se inicializa, indicando que la carpeta es 'uploads'
+const storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, 'uploads')
+    },
+    filename: function (req, file, cb) {
+        cb(null, Date.now() + '-' + file.originalname)
+    }
+})
+
+const upload = multer({ storage: storage }).single('file');
+
+>>>>>>> add_new
 
 
 const router = express.Router();
