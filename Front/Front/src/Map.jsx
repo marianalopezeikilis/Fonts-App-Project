@@ -6,7 +6,7 @@ import MarkerClusterGroup from '@changey/react-leaflet-markercluster';
 import 'react-leaflet-markercluster/dist/styles.min.css';
 import 'leaflet/dist/leaflet.css';
 import Ubicacion from './images/miUbi.png';
-import Fuentes from './components/FuentesCat.json';
+import Fuentes from './components/FuentesCat(zip).json';
 import FuenteIco from './images/logo02.png';
 
 function Map() {
@@ -53,7 +53,7 @@ function Map() {
         <MapContainer
           center={{ lat: 51.50853, lng: -0.12574 }}
           zoom={15}
-          scrollWheelZoom={false}>
+          scrollWheelZoom={true}>
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
