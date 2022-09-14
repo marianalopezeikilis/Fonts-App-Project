@@ -7,6 +7,7 @@ import App from './App'
 import Blog from "./Blog";
 import BlogLogin from "./BlogLogin";
 import BlogAdd from "./BlogAdd";
+import Map from "./components/map"; 
 
 ReactDOM.render(
   <BrowserRouter>
@@ -16,6 +17,7 @@ ReactDOM.render(
       <Route path="blog" element={<Blog />} />
       <Route path="login"  element={<BlogLogin />} />
       <Route path="add" element={<BlogAdd />} />
+      <Route path="fuentes" element={<Map />}/>
     </Routes>
   </BrowserRouter>,
   document.getElementById('root')
