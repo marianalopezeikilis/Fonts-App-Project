@@ -8,7 +8,7 @@ import Blog from "./Blog";
 import BlogLogin from "./BlogLogin";
 import BlogAdd from "./BlogAdd";
 import Map from './Map';
-
+import ShowFont from './ShowFont';
 
 ReactDOM.render(
   <BrowserRouter>
