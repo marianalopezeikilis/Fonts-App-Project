@@ -42,7 +42,7 @@ const [num, setNum] = useState(0);
 
         <Col>
           <Card>
-            <Card.Img variant="top" src={el.img}  />
+            <Card.Img variant="top" src={"http://localhost:3000/img/"+ el.img}  />
             <Card.Body>
               <Card.Title>{el.titulo}</Card.Title>
               <Card.Text>

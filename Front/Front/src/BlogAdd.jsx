@@ -1,11 +1,9 @@
 import { useState } from "react";
 import NavBar from "./components/navbar.jsx";
-import ButtonBlue from "./components/ButtonBlue";
-import InputBlue from "./components/InputBlue";
 import './App.css'
 import { Form, Container, Row, Col, Button } from 'react-bootstrap';
 import ImageUpload from "./ImageUpload.jsx";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function BlogAdd() {
 
@@ -13,6 +11,8 @@ function BlogAdd() {
   const [subtitulo, setSubtitulo] = useState('');
   const [articulo, setArticulo] = useState('');
   const [img, setImg] = useState(null);
+
+  const navigateTo = useNavigate();
 
   const submit = (e) => {
     e.preventDefault();
@@ -33,6 +33,7 @@ function BlogAdd() {
       .then(res => {
         if (res.ok === true) {
           //toast.success("Article afegit");
+          navigateTo("/blog")
         } else {
           console.log(res);
           //toast.error("Error: " + res.error);
@@ -46,53 +47,57 @@ function BlogAdd() {
     <div class="background_blog">
       <style type="text/css">
         {`
-    .btn-celeste {
-      background-color: #93BFD7;
-      color: white;
-      margin:5px;
-      width: 100%;
- max-width: 150px;
- box-sizing: border-box;
- box-shadow: 2px 2px 5px #888888;
- border:none;
+          .btn-celeste {
+            background-color: #93BFD7;
+            color: white;
+            padding-left:70px;
+            padding-right:70px;
+            width: 100%;
+            box-sizing: border-box;
+            box-shadow: 2px 2px 5px #888888;
+            border:none;
 
-    }
-    .btn-celeste:hover {
-  background-color: #39A2DB;  
-  border:none;
-  color: white;
-}
+          }
+          .btn-celeste:hover {
+            background-color: #39A2DB;  
+            border:none;
+            color: white;
+          }
   
-    `}
+        `}
       </style>
-      <NavBar />
-      <Container>
-        <Row className="justify-content-center">
-          <Col xs="10" md="10" lg="8" >
-            <div class="add_position">
-              <h1>New Post</h1>
-              <Form onSubmit={submit}>
-                <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                  <Form.Label class="add_text_color">Title</Form.Label>
-                  <Form.Control type="text" placeholder="Title" value={titulo} onInput={(e) => setTitulo(e.target.value)} />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
-                  <Form.Label class="add_text_color">Subtitle</Form.Label>
-                  <Form.Control type="text" placeholder="Subtitle" value={subtitulo} onInput={(e) => setSubtitulo(e.target.value)} />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                  <Form.Label class="add_text_color">Text</Form.Label>
-                  <Form.Control as="textarea" rows={6} value={articulo} onInput={(e) => setArticulo(e.target.value)} />
-                </Form.Group>
-                <ImageUpload useFoto={[img, setImg]} />
-                <Link to="blog" replace>
-                  <Button type="submit" variant="celeste">{"Add"}</Button>
-                </Link>
+      <div class="background_add_02">
+        <NavBar />
+        <Container>
+          <Row className="justify-content-center">
+            <Col xs="10" md="10" lg="8" >
+              <div class="add_position">
+                <h1>New Post</h1>
+                <Form onSubmit={submit}>
+                  <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+                    <Form.Label class="add_text_color">Title</Form.Label>
+                    <Form.Control type="text" placeholder="Title" value={titulo} onInput={(e) => setTitulo(e.target.value)} />
+                  </Form.Group>
+                  <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
+                    <Form.Label class="add_text_color">Subtitle</Form.Label>
+                    <Form.Control type="text" placeholder="Subtitle" value={subtitulo} onInput={(e) => setSubtitulo(e.target.value)} />
+                  </Form.Group>
+                  <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                    <Form.Label class="add_text_color">Text</Form.Label>
+                    <Form.Control as="textarea" rows={6} value={articulo} onInput={(e) => setArticulo(e.target.value)} />
+                  </Form.Group>
+                  <ImageUpload useFoto={[img, setImg]} />
+                  <div class="button_add_center">
+                  {/*}<Link to="/blog" replace>{*/}
+                    <Button type="submit" variant="celeste">{"Add"}</Button>
+                  {/*}</Link>{*/}
+                  </div>
                 </Form>
-            </div>
-          </Col>
-        </Row>
-      </Container>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
     </div>
   )
 }
