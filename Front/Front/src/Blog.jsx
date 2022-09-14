@@ -1,9 +1,7 @@
 import NavBar from "./components/navbar.jsx";
-import ButtonBlue from "./components/ButtonBlue";
 import { Button, Card, Col, Row } from "react-bootstrap";
 import "./App.css";
 import ButtonBlue from "./components/ButtonBlue";
-import { Button, Card, Col, Row } from "react-bootstrap";
 import { useState, useEffect } from "react";
 
 
