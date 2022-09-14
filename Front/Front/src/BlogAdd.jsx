@@ -3,6 +3,7 @@ import './App.css'
 import { Form, Container, Row, Col, Button } from 'react-bootstrap';
 import ImageUpload from "./ImageUpload.jsx";
 import { Link, useNavigate } from 'react-router-dom';
+import { useState} from "react"; 
 
 function BlogAdd() {
 
@@ -51,7 +52,6 @@ function BlogAdd() {
             color: white;
             padding-left:70px;
             padding-right:70px;
-            width: 100%;
             box-sizing: border-box;
             box-shadow: 2px 2px 5px #888888;
             border:none;
@@ -87,9 +87,7 @@ function BlogAdd() {
                   </Form.Group>
                   <ImageUpload useFoto={[img, setImg]} />
                   <div class="button_add_center">
-                  {/*}<Link to="/blog" replace>{*/}
                     <Button type="submit" variant="celeste">{"Add"}</Button>
-                  {/*}</Link>{*/}
                   </div>
                 </Form>
               </div>
