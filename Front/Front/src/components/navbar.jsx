@@ -1,17 +1,8 @@
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { BsArrowLeftShort, BsPlusLg } from "react-icons/bs";
 import {Link, useNavigate} from 'react-router-dom';
-<<<<<<< HEAD
-
-import {Link, useNavigate} from 'react-router-dom';
 
 
-
-=======
-import {Link, useNavigate} from 'react-router-dom';
-
-
->>>>>>> add_new
 function NavBar() {
   const btn_style = { color: "E8F0F2", fontSize: "35px" }
   const btn_style02 = { color: "93BFD7", fontSize: "19px", marginTop: "-5px", marginRight: "5px" }
