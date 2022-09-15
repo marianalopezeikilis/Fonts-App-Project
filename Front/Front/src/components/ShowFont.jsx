@@ -12,18 +12,24 @@ function ShowFont() {
   return (
     <div>
     
-    <Container fluid className="forms containerhome">
-      {/* <Row className="justify-content-center"> */}
-        {/* <Col xs="2" md="2" lg="4" className="colhome"> */}
-        
-    <div> <Form.Label className='title-form'>Nombre de la fuente</Form.Label>
-    <Form.Control type="email" placeholder="" /></div>
-        {/* </Col> */}
-      {/* </Row> */}
+
+<Container>
+    <Row>
+   <Col>
+<form>
+<div class="form-row">
+<div class="form-group col-md-6">
+    <label for="inputNombre">Nombre de la fuente</label>
+    <input type="text" class="form-control" id="inputNombre" placeholder="Personaliza el nombre de la fuente"/>
+  </div>
+</div>
+</form>
+   </Col>
+    </Row>
+</Container>
 
 
 
-    </Container>
    </div>
   )
 }
