@@ -27,7 +27,9 @@ function NavBar() {
               <Nav.Link href="blog"><BsArrowLeftShort style={btn_style} /></Nav.Link> :
               window.location.pathname.includes("blog") || window.location.pathname.includes("fuentes") ?
                 <Nav.Link href="home"><BsArrowLeftShort style={btn_style} /></Nav.Link> :
-                <Nav.Link href=""><BsArrowLeftShort style={btn_style} /></Nav.Link>
+                window.location.pathname.includes("new") || window.location.pathname.includes("font") ?
+                  <Nav.Link href="fuentes"><BsArrowLeftShort style={btn_style} /></Nav.Link> :
+                  <Nav.Link href=""><BsArrowLeftShort style={btn_style} /></Nav.Link>
           }
         </Nav>
         <Nav className="m-auto">

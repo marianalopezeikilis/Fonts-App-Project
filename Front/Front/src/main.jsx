@@ -18,6 +18,9 @@ ReactDOM.render(
       <Route path="login"  element={<BlogLogin />} />
       <Route path="add" element={<BlogAdd />} />
       <Route path="fuentes" element={<Map />}/>
+      <Route path="font" element={<Font />}/> {/* Visualizacion de la fuente, se canvia el elemento depende del nombre*/}
+      <Route path="new" element={<New />}/> {/* Nueva fuente, se canvia el elemento depende del nombre*/}
+      
     </Routes>
   </BrowserRouter>,
   document.getElementById('root')
