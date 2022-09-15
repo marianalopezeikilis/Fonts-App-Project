@@ -272,3 +272,23 @@ left:0px;
     flex-direction: column;
 
   }
+
+
+  /*MAP*/
+  .add_newfont{
+    border-radius: 50%;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    right: 20px;
+    bottom: 20px;
+    background-color: #053742;
+    color: #E8F0F2;
+    text-align: center;
+    z-index: 1;
+  }
+
+  .position_map{
+    z-index: -1;
+    position:relative;
+  }
