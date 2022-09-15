@@ -23,9 +23,9 @@ function NavBar() {
       <Container>
         <Nav>
           {
-            window.location.pathname.includes("add" || "login") ?
+            window.location.pathname.includes("add") || window.location.pathname.includes("login") ?
               <Nav.Link href="blog"><BsArrowLeftShort style={btn_style} /></Nav.Link> :
-              window.location.pathname.includes("blog" || "fuentes") ?
+              window.location.pathname.includes("blog") || window.location.pathname.includes("fuentes") ?
                 <Nav.Link href="home"><BsArrowLeftShort style={btn_style} /></Nav.Link> :
                 <Nav.Link href=""><BsArrowLeftShort style={btn_style} /></Nav.Link>
           }
