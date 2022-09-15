@@ -22,9 +22,9 @@ function Home() {
             público y contribuir al mismo tiempo a nuestro planeta.
           </p>
 
-          <ButtonBlue text="Blog" ruta="blog" />
+          <ButtonBlue text="Blog" ruta="/blog" />
           <br className="d-xl-none"/>
-          <ButtonBlue text="Fuentes" ruta="fuentes" />
+          <ButtonBlue text="Fuentes" ruta="/fuentes" />
           
         </Col>
       </Row>
