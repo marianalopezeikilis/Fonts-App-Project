@@ -24,7 +24,7 @@ function NavBar() {
           {
             window.location.pathname.includes("add" || "login") ?
               <Nav.Link href="blog"><BsArrowLeftShort style={btn_style} /></Nav.Link> :
-              window.location.pathname.includes("blog") ?
+              window.location.pathname.includes("blog" || "fuentes") ?
                 <Nav.Link href="home"><BsArrowLeftShort style={btn_style} /></Nav.Link> :
                 <Nav.Link href=""><BsArrowLeftShort style={btn_style} /></Nav.Link>
           }

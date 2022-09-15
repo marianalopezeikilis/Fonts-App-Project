@@ -3,6 +3,7 @@ import { render } from 'react-dom';
 import { useState } from "react";
 import './map.css';
 import 'leaflet/dist/leaflet.css';
+import NavBar from "./navbar.jsx";
 
 
 
@@ -29,6 +30,7 @@ function Map() {
 
     return (
         <>
+        <NavBar/>
         <MapContainer
           center={{ lat: 51.505, lng: -0.09 }}
           zoom={13}
