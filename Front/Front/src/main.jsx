@@ -9,6 +9,7 @@ import BlogLogin from "./BlogLogin";
 import BlogAdd from "./BlogAdd";
 import Map from './Map';
 import ShowFont from './ShowFont';
+import NewFont from './NewFont';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -20,6 +21,7 @@ ReactDOM.render(
       <Route path="login" element={<BlogLogin />} />
       <Route path="showfont" element={<ShowFont />} />
       <Route path="add" element={<BlogAdd />} />
+      <Route path="new" element={<NewFont />} />
     </Routes>
   </BrowserRouter>,
   document.getElementById('root')

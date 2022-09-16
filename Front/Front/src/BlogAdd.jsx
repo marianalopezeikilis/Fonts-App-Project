@@ -1,7 +1,6 @@
 import { useState } from "react";
 import NavBar from "./components/navbar.jsx";
 import ButtonBlue from "./components/ButtonBlue";
-import InputBlue from "./components/InputBlue";
 import './App.css'
 import { Form, Container, Row, Col, Button } from 'react-bootstrap';
 import ImageUpload from "./ImageUpload.jsx";
