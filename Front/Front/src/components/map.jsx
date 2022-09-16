@@ -5,11 +5,12 @@ import { useState } from "react";
 import { BsPlusLg } from "react-icons/bs";
 import './map.css';
 import 'leaflet/dist/leaflet.css';
+
+
 import NavBar from "./navbar.jsx";
 import '../App.css'
-import Ubicacion from './images/miUbi.png';
-import Fuentes from './FuentesCat1.json';
-import FuenteIco from './images/logo02.png';
+
+
 
 
 function Map() {
@@ -41,37 +42,6 @@ function Map() {
       <NavBar />
       <div class="position_map">
         <MapContainer
-<<<<<<< HEAD
-          center={{ lat: 51.50853, lng: -0.12574 }}
-          zoom={15}
-          scrollWheelZoom={true}>
-          <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          <MarkerClusterGroup markers={FuentesIcon}>
-          <GeoJSON data={Fuentes}  pointToLayer={(feature, latlng) => {
-            if (Marker) {
-              return L.marker(latlng, { icon: FuentesIcon });
-            }
-            return L.marker(latlng);
-          }} 
-          onEachFeature= {(feature = {}, layer) => {
-            const { properties = {} } = feature;
-            const { name } = properties;
-    
-            if ( !name ) return;
-
-            layer.bindPopup(`<p>${name}</p>`);}}
-            ></GeoJSON>
-          </MarkerClusterGroup>
-          <LocationMarker />
-        </MapContainer>
-        </>
-
-
-    )
-=======
         center={{ lat: 51.505, lng: -0.09 }}
         zoom={13}
         scrollWheelZoom={false}>
@@ -90,7 +60,8 @@ function Map() {
     </>
 
 
+
   )
->>>>>>> main
+
 
 } export default Map;
