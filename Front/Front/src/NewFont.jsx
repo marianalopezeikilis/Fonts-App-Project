@@ -9,7 +9,7 @@ import NavBar from "./components/NavBar";
 function NewFont() {
     return (
         <div>
-            <NavBar/>
+            <NavBar />
             <Container fluid className="containerhome">
                 <Row className="justify-content-center">
                     <Col className='colhome'>
@@ -20,15 +20,16 @@ function NewFont() {
                                     <Form.Label>New font's Name</Form.Label>
                                     <Form.Control type="text" placeholder="Name" />
                                 </Form.Group>
+                                <Form.Group controlId="formFile" className="mb-3">
+                                    <Form.Label>Photo</Form.Label>
+                                    <Form.Control type="file" name="file"/>
+                                </Form.Group>
                                 <ButtonBlue text="Add Font" ruta="/fuentes" />
                             </Form>
                         </div>
                     </Col>
                 </Row>
             </Container>
-
-
-
         </div>
     )
 }
