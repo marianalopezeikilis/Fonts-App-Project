@@ -85,10 +85,10 @@ function Map() {
         </MapContainer>
         </div>  
         <Link to="/new" replace>
-//         <div class="add_newfont">
-//           <BsPlusLg style={btn_style04}/>
-//         </div>
-//       </Link>
+        <div class="add_newfont">
+           <BsPlusLg style={btn_style04}/>
+      </div>
+     </Link>
         </>
 
 
