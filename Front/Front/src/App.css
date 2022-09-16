@@ -285,10 +285,10 @@ left:0px;
     background-color: #053742;
     color: #E8F0F2;
     text-align: center;
-    z-index: 1;
+    z-index: 400;
   }
 
-  .position_map{
+  /*.position_map{
     z-index: -1;
     position:relative;
-  }
+  }*/

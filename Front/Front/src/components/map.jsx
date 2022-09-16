@@ -37,12 +37,8 @@ function Map() {
   return (
     <>
       <NavBar />
-      <Link to="/new" replace>
-        <div class="add_newfont">
-          <BsPlusLg style={btn_style04}/>
-        </div>
-      </Link>
-      <div class="position_map"><MapContainer
+      <div class="position_map">
+        <MapContainer
         center={{ lat: 51.505, lng: -0.09 }}
         zoom={13}
         scrollWheelZoom={false}>
@@ -53,6 +49,11 @@ function Map() {
         <LocationMarker />
       </MapContainer>
       </div>
+      <Link to="/new" replace>
+        <div class="add_newfont">
+          <BsPlusLg style={btn_style04}/>
+        </div>
+      </Link>
     </>
 
 
