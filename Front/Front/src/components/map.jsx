@@ -16,6 +16,8 @@ import {Link, useNavigate} from 'react-router-dom';
 
 function Map() {
   const btn_style04 = { color: "E8F0F2", fontSize: "35px", marginTop: "13px" }
+
+  const {datosFuentes, setDatosFuentes } = useState(Fuentes);
   let loveIcon = new L.icon({
     iconUrl: Ubicacion,
     iconRetinaUrl: Ubicacion,
@@ -66,7 +68,7 @@ function Map() {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           <MarkerClusterGroup markers={FuentesIcon}>
-          <GeoJSON data={Fuentes}  pointToLayer={(feature, latlng) => {
+          <GeoJSON data={datosFuentes }  pointToLayer={(feature, latlng) => {
             if (Marker) {
               return L.marker(latlng, { icon: FuentesIcon });
             }
