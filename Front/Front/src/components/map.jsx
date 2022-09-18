@@ -9,7 +9,7 @@ import MarkerClusterGroup from '@changey/react-leaflet-markercluster';
 import 'react-leaflet-markercluster/dist/styles.min.css';
 import 'leaflet/dist/leaflet.css';
 import Ubicacion from './images/miUbi.png';
-import Fuentes from './FuentesCat(zip).json';
+import Fuentes from './Fuentes(zip).json';
 import FuenteIco from './images/logo02.png';
 import NavBar from "./navbar.jsx";
 import {Link, useNavigate} from 'react-router-dom';
@@ -33,7 +33,7 @@ function Map() {
     useEffect(() => {
       map.locate().on("locationfound", function (e) {
         setPosition(e.latlng);
-        map.flyTo(e.latlng, map.getZoom());
+        map.flyTo(e.latlng,15);
       });
     }, []);
 
@@ -58,17 +58,17 @@ function Map() {
         <>
        <NavBar />
       <div className="position_map">
-
+      {/* lat: 40.463667, lng: -3.74922  */}
         <MapContainer
-          center={{ lat: 51.50853, lng: -0.12574 }}
-          zoom={15}
+          center={{ lat: 40.463667, lng: -3.74922 }}
+          zoom={5}
           scrollWheelZoom={true}>
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           <MarkerClusterGroup markers={FuentesIcon}>
-          <GeoJSON data={datosFuentes }  pointToLayer={(feature, latlng) => {
+          <GeoJSON data={Fuentes}  pointToLayer={(feature, latlng) => {
             if (Marker) {
               return L.marker(latlng, { icon: FuentesIcon });
             }
