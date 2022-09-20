@@ -68,7 +68,7 @@ function Map() {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           <MarkerClusterGroup markers={FuentesIcon}>
-          <GeoJSON data={datosFuentes }  pointToLayer={(feature, latlng) => {
+          <GeoJSON data={Fuentes}  pointToLayer={(feature, latlng) => {
             if (Marker) {
               return L.marker(latlng, { icon: FuentesIcon });
             }
