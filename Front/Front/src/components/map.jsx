@@ -80,8 +80,9 @@ console.log('datos ANTIGUOS', datosFuentes);
         <>
        <NavBar />
        <button onClick={()=>agrega({ "type": "Feature", "properties": { "id": "pepito", "name": "nueva fuente"},"geometry": { "type": "Point", "coordinates": [ 2.179840, 41.388372 ] } })}> Agregar fuente</button>
-      <div className="position_map">
+      <div className="position_map madre">
       {/* lat: 40.463667, lng: -3.74922  */}
+     
         <MapContainer
           center={{ lat: 40.463667, lng: -3.74922 }}
           zoom={5}
@@ -91,6 +92,7 @@ console.log('datos ANTIGUOS', datosFuentes);
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           <MarkerClusterGroup markers={FuentesIcon}>
+          
           <GeoJSON key={llave} data={datosFuentes}  pointToLayer={(feature, latlng) => {
             if (Marker) {
               return L.marker(latlng, { icon: FuentesIcon });
@@ -110,6 +112,7 @@ console.log('datos ANTIGUOS', datosFuentes);
         </MapContainer>
         </div>  
 
+
         <Link to="/new" replace>
         <div className="add_newfont">
            <BsPlusLg style={btn_style04}/>
@@ -121,7 +124,4 @@ console.log('datos ANTIGUOS', datosFuentes);
     )
 
 } export default Map;
-
-// guardar como string json a sql 
-// cargar 
-//
+  
