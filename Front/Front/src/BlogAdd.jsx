@@ -44,7 +44,7 @@ function BlogAdd() {
 
 
   return (
-    <div class="background_blog">
+    <div className="background_blog">
       <style type="text/css">
         {`
           .btn-celeste {
@@ -65,29 +65,29 @@ function BlogAdd() {
   
         `}
       </style>
-      <div class="background_add_02">
+      <div className="background_add_02">
         <NavBar />
         <Container>
           <Row className="justify-content-center">
             <Col xs="10" md="10" lg="8" >
               <div class="add_position">
-                <h1>New Post</h1>
+                <h1>Nueva publicación</h1>
                 <Form onSubmit={submit}>
                   <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-                    <Form.Label class="add_text_color">Title</Form.Label>
+                    <Form.Label class="add_text_color">Titulo</Form.Label>
                     <Form.Control type="text" placeholder="Title" value={titulo} onInput={(e) => setTitulo(e.target.value)} />
                   </Form.Group>
                   <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
-                    <Form.Label class="add_text_color">Subtitle</Form.Label>
+                    <Form.Label class="add_text_color">Subtitulo</Form.Label>
                     <Form.Control type="text" placeholder="Subtitle" value={subtitulo} onInput={(e) => setSubtitulo(e.target.value)} />
                   </Form.Group>
                   <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                    <Form.Label class="add_text_color">Text</Form.Label>
+                    <Form.Label class="add_text_color">Texto</Form.Label>
                     <Form.Control as="textarea" rows={6} value={articulo} onInput={(e) => setArticulo(e.target.value)} />
                   </Form.Group>
                   <ImageUpload useFoto={[img, setImg]} />
                   <div class="button_add_center">
-                    <Button type="submit" variant="celeste">{"Add"}</Button>
+                    <Button type="submit" variant="celeste">{"Agregar"}</Button>
                   </div>
                 </Form>
               </div>

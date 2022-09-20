@@ -296,3 +296,15 @@ left:0px;
     z-index: -1;
     position:relative;
   }*/
+
+
+  .blog_img{
+    width:100%;
+    border-radius: 2px;
+    margin-bottom: 30px;
+  }
+
+  .view_text{
+    text-align: justify;
+    margin-top: 20px;
+  }

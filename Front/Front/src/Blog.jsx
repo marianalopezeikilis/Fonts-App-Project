@@ -1,15 +1,15 @@
 import NavBar from "./components/navbar.jsx";
 import { Button, Card, Col, Row } from "react-bootstrap";
 import "./App.css";
-import ButtonBlue from "./components/ButtonBlue";
 import { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
 
 
 
 function Blog() {
   const [dades, setDades] = useState([]);
-const [error, setError] = useState("");
-const [num, setNum] = useState(0);
+  const [error, setError] = useState("");
+  const [num, setNum] = useState(0);
   //Funcion para conectar con la api
 
   function loadData() {
@@ -40,36 +40,55 @@ const [num, setNum] = useState(0);
 
   const lista = dades.map((el) => (
     <div key={el.id}>
-
-        <Col>
-          <Card>
-            <Card.Img variant="top" src={"http://localhost:3000/img/"+ el.img}  />
-            <Card.Body>
-              <Card.Title>{el.titulo}</Card.Title>
-              <Card.Text>
+      <style type="text/css">
+      {`
+        .btn-celeste {
+          background-color: #93BFD7;
+          color: white;
+          margin:5px;
+          width: 100%;
+          max-width: 150px;
+          box-sizing: border-box;
+          box-shadow: 2px 2px 5px #888888;
+          border:none;
+        }
+        .btn-celeste:hover {
+          background-color: #39A2DB;  
+          border:none;
+          color: white;
+        }
+    `}
+      </style>
+      <Col>
+        <Card>
+          <Card.Img variant="top" src={"http://localhost:3000/img/" + el.img} />
+          <Card.Body>
+            <Card.Title>{el.titulo}</Card.Title>
+            <Card.Text>
               {el.subtitulo}
-               </Card.Text> 
-            </Card.Body>
-          </Card>
-        </Col>
-  
-   
-     
+            </Card.Text>
+            <Link to={`/view/${el.id}`}>
+              <Button variant="celeste" size="xl">Ver mas</Button>
+            </Link>
+          </Card.Body>
+        </Card>
+      </Col>
     </div>
   ));
 
 
   return (
     <div className="bodyblog">
+      
       <div className="background_add_02">
-      <NavBar />
-      <div className=" containerimg">
+        <NavBar />
+        <div className=" containerimg">
 
-        <Row xs={1} md={2} 
-        xl={(dades.length>2 ? 4 : 2)} className="g-4 m-0">
+          <Row xs={1} md={2}
+            xl={(dades.length > 2 ? 4 : 2)} className="g-4 m-0">
 
-        {lista} </Row>
-      </div>
+            {lista} </Row>
+        </div>
       </div>
     </div>
   );
