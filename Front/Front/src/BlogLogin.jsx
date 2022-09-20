@@ -13,14 +13,14 @@ function BlogLogin() {
           <Col xs="2" md="2" lg="4" className="colhome background_login_web">
             <Form>
               <Form.Group className="mb-3" controlId="formBasicText">
-                <Form.Label class="login_text_color">Username</Form.Label>
-                <Form.Control type="text" placeholder="Enter username" />
+                <Form.Label class="login_text_color">Usuario</Form.Label>
+                <Form.Control type="text" placeholder="Nombre de usuario" />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label class="login_text_color">Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" />
+                <Form.Label class="login_text_color">Contraseña</Form.Label>
+                <Form.Control type="password" placeholder="Contraseña" />
               </Form.Group>
-              <ButtonBlue text="Login" ruta="/add" />
+              <ButtonBlue text="Entrar" ruta="/add" />
             </Form>
             </Col>
           </Row>
