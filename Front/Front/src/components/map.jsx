@@ -5,8 +5,8 @@ import { MapContainer, TileLayer, useMap, Marker, Popup, useMapEvents, GeoJSON, 
 import { render } from 'react-dom';
 import { useState, useEffect } from "react";
 import './map.css';
-import MarkerClusterGroup from '@changey/react-leaflet-markercluster';
-import 'react-leaflet-markercluster/dist/styles.min.css';
+//import MarkerClusterGroup from '@changey/react-leaflet-markercluster';
+//import 'react-leaflet-markercluster/dist/styles.min.css';
 import 'leaflet/dist/leaflet.css';
 import Ubicacion from './images/miUbi.png';
 import Fuentes from './FuentesCat(zip).json';

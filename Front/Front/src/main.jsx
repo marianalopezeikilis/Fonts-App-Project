@@ -7,8 +7,10 @@ import App from './App'
 import Blog from "./Blog";
 import BlogLogin from "./BlogLogin";
 import BlogAdd from "./BlogAdd";
-import Map from "./components/map"; 
 import BlogView from "./BlogView";
+import Map from "./components/map"; 
+import ShowFont from './ShowFont';
+import NewFont from './NewFont';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -20,9 +22,8 @@ ReactDOM.render(
       <Route path="add" element={<BlogAdd />} />
       <Route path="fuentes" element={<Map />}/>
       <Route path="view/:id" element={<BlogView />}/>
-      {/*<Route path="font" element={<Font />}/> Visualizacion de la fuente, se canvia el elemento depende del nombre*/}
-      {/*<Route path="new" element={<New />}/>  Nueva fuente, se canvia el elemento depende del nombre*/}
-      
+      <Route path="font" element={<ShowFont />} />
+      <Route path="new" element={<NewFont />} />
     </Routes>
   </BrowserRouter>,
   document.getElementById('root')

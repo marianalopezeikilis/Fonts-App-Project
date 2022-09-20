@@ -1,0 +1,43 @@
+
+  
+  .containerhome {
+    background-color: #E8F0F2;
+    /* display: inline-block;
+    height: fit-content; */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+   
+  }
+  
+  .colhome{
+    background-color: #E8F0F2;
+    text-align: left;
+    min-width: 260px;
+  
+  }
+
+
+
+  .imgEstrella {
+    width: 20px;
+  }
+
+  .imgFuente {
+    width: 400px;
+  }
+
+  .inputNombre {
+    padding:100px;
+
+  }
+
+  .ranking {
+    margin-top: 5px;
+    text-align: center;
+  }
+
+.inputFuente{
+    margin-bottom:5px;
+}
+
