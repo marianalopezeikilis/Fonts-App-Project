@@ -11,6 +11,7 @@ import BlogView from "./BlogView";
 import Map from "./components/map"; 
 import ShowFont from './ShowFont';
 import NewFont from './NewFont';
+import Loading from "./components/Loading"; 
 
 ReactDOM.render(
   <BrowserRouter>
@@ -24,7 +25,8 @@ ReactDOM.render(
       <Route path="view/:id" element={<BlogView />}/>
       <Route path="font" element={<ShowFont />} />
       <Route path="new" element={<NewFont />} />
-    </Routes>
+      <Route path="loading" element={<Loading />}/>
+      </Routes>
   </BrowserRouter>,
   document.getElementById('root')
 )

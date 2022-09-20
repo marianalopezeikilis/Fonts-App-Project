@@ -1,4 +1,3 @@
-/* HOME */
 
 .imgagua {
 width: 50px;
@@ -289,6 +288,27 @@ left:0px;
     z-index: -1;
     position:relative;
   }*/
+
+
+  .hijocentrado{
+    position: relative;
+    text-align: center;
+  align-self: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 200px;
+    background-color: white;
+    display: flex;
+  }
+  
+  .madre{
+  position:absolute;
+
+  }
 
 
   .blog_img{

@@ -9,15 +9,19 @@ import MarkerClusterGroup from '@changey/react-leaflet-markercluster';
 import 'react-leaflet-markercluster/dist/styles.min.css';
 import 'leaflet/dist/leaflet.css';
 import Ubicacion from './images/miUbi.png';
-import Fuentes from './FuentesCat(zip).json';
+import Fuentes from './Fuentes(zip)-test.json';
 import FuenteIco from './images/logo02.png';
 import NavBar from "./navbar.jsx";
 import {Link, useNavigate} from 'react-router-dom';
+import { map } from 'leaflet';
+
 
 function Map() {
+  const [datosFuentes, setDatosFuentes] = useState(Fuentes);
+  const [llave, setLlave] = useState(9);
   const btn_style04 = { color: "E8F0F2", fontSize: "28px", marginTop: "11px" }
 
-  const {datosFuentes, setDatosFuentes } = useState(Fuentes);
+  
   let loveIcon = new L.icon({
     iconUrl: Ubicacion,
     iconRetinaUrl: Ubicacion,
@@ -33,7 +37,7 @@ function Map() {
     useEffect(() => {
       map.locate().on("locationfound", function (e) {
         setPosition(e.latlng);
-        map.flyTo(e.latlng, map.getZoom());
+        map.flyTo(e.latlng,15);
       });
     }, []);
 
@@ -54,21 +58,47 @@ function Map() {
         popupAnchor: [0, -15],
       });
 
+      useEffect(() => {
+        console.log('Han cambiado los datos', datosFuentes);
+      
+      }, [datosFuentes]);
+
+      //funcion para probar que agregue y recargue
+      function agrega(x) {  
+console.log('datos ANTIGUOS', datosFuentes);
+        let nuevosDatos = JSON.parse(JSON.stringify(datosFuentes));
+        nuevosDatos.features.push(x);
+        setDatosFuentes(nuevosDatos);
+        console.log('datos cargados', nuevosDatos);
+        setLlave(nuevosDatos.features.length);
+      
+ 
+        
+      }
+
+
     return (
         <>
        <NavBar />
-      <div className="position_map">
-
+       <button onClick={()=>agrega({ "type": "Feature", "properties": { "id": "pepito", "name": "nueva fuente"},"geometry": { "type": "Point", "coordinates": [ 2.179840, 41.388372 ] } })}> Agregar fuente</button>
+      <div className="position_map madre">
+      {/* lat: 40.463667, lng: -3.74922  */}
+     
         <MapContainer
-          center={{ lat: 51.50853, lng: -0.12574 }}
-          zoom={15}
+          center={{ lat: 40.463667, lng: -3.74922 }}
+          zoom={5}
           scrollWheelZoom={true}>
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           <MarkerClusterGroup markers={FuentesIcon}>
+<<<<<<< HEAD
           <GeoJSON data={Fuentes}  pointToLayer={(feature, latlng) => {
+=======
+          
+          <GeoJSON key={llave} data={datosFuentes}  pointToLayer={(feature, latlng) => {
+>>>>>>> map_mariana
             if (Marker) {
               return L.marker(latlng, { icon: FuentesIcon });
             }
@@ -86,8 +116,10 @@ function Map() {
           <LocationMarker />
         </MapContainer>
         </div>  
+
+
         <Link to="/new" replace>
-        <div class="add_newfont">
+        <div className="add_newfont">
            <BsPlusLg style={btn_style04}/>
       </div>
      </Link>
@@ -97,3 +129,4 @@ function Map() {
     )
 
 } export default Map;
+  

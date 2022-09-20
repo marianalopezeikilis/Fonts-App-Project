@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import indexRouter from './rutas/indexRouter.js';
 import newsRouter from './rutas/newsRouter.js';
-
+import fuentesRouter from './rutas/fuentesRouter.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -16,7 +16,7 @@ app.use(cors());
 
 app.use('/', indexRouter);
 app.use('/api/news', newsRouter);
-
+app.use('/fuentestest', fuentesRouter);
 app.use('/img', express.static(__dirname + '/uploads'));
 
 const port = 3000
