@@ -5,8 +5,8 @@ import { MapContainer, TileLayer, useMap, Marker, Popup, useMapEvents, GeoJSON, 
 import { render } from 'react-dom';
 import { useState, useEffect } from "react";
 import './map.css';
-//import MarkerClusterGroup from '@changey/react-leaflet-markercluster';
-//import 'react-leaflet-markercluster/dist/styles.min.css';
+import MarkerClusterGroup from '@changey/react-leaflet-markercluster';
+import 'react-leaflet-markercluster/dist/styles.min.css';
 import 'leaflet/dist/leaflet.css';
 import Ubicacion from './images/miUbi.png';
 import Fuentes from './FuentesCat(zip).json';
@@ -15,7 +15,7 @@ import NavBar from "./navbar.jsx";
 import {Link, useNavigate} from 'react-router-dom';
 
 function Map() {
-  const btn_style04 = { color: "E8F0F2", fontSize: "35px", marginTop: "13px" }
+  const btn_style04 = { color: "E8F0F2", fontSize: "28px", marginTop: "11px" }
 
   const {datosFuentes, setDatosFuentes } = useState(Fuentes);
   let loveIcon = new L.icon({
