@@ -93,12 +93,11 @@ console.log('datos ANTIGUOS', datosFuentes);
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           <MarkerClusterGroup markers={FuentesIcon}>
-<<<<<<< HEAD
-          <GeoJSON data={Fuentes}  pointToLayer={(feature, latlng) => {
-=======
+
+ 
           
           <GeoJSON key={llave} data={datosFuentes}  pointToLayer={(feature, latlng) => {
->>>>>>> map_mariana
+
             if (Marker) {
               return L.marker(latlng, { icon: FuentesIcon });
             }
