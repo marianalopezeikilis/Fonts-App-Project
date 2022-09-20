@@ -14,17 +14,17 @@ function NewFont() {
                 <Row className="justify-content-center">
                     <Col className='colhome'>
                         <div class="add_position">
-                            <h1>New Font</h1>
+                            <h1>Nueva fuente</h1>
                             <Form>
                                 <Form.Group className="mb-3" controlId="formBasicText">
-                                    <Form.Label>New font's Name</Form.Label>
-                                    <Form.Control type="text" placeholder="Name" />
+                                    <Form.Label>Nombre</Form.Label>
+                                    <Form.Control type="text" placeholder="Nombre de la fuente nueva" />
                                 </Form.Group>
                                 <Form.Group controlId="formFile" className="mb-3">
-                                    <Form.Label>Photo</Form.Label>
+                                    <Form.Label>Foto</Form.Label>
                                     <Form.Control type="file" name="file"/>
                                 </Form.Group>
-                                <ButtonBlue text="Add Font" ruta="/fuentes" />
+                                <ButtonBlue text="Agregar fuente" ruta="/fuentes" />
                             </Form>
                         </div>
                     </Col>

@@ -19,7 +19,7 @@ ReactDOM.render(
       <Route path="fuentes" element={<Map />}/>
       <Route path="blog" element={<Blog />} />
       <Route path="login" element={<BlogLogin />} />
-      <Route path="showfont" element={<ShowFont />} />
+      <Route path="font" element={<ShowFont />} />
       <Route path="add" element={<BlogAdd />} />
       <Route path="new" element={<NewFont />} />
     </Routes>
