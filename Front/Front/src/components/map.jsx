@@ -9,15 +9,15 @@ import MarkerClusterGroup from '@changey/react-leaflet-markercluster';
 import 'react-leaflet-markercluster/dist/styles.min.css';
 import 'leaflet/dist/leaflet.css';
 import Ubicacion from './images/miUbi.png';
-import Fuentes from './Fuentes(zip).json';
+import Fuentes from './Fuentes(zip)-test.json';
 import FuenteIco from './images/logo02.png';
 import NavBar from "./navbar.jsx";
 import {Link, useNavigate} from 'react-router-dom';
 
+
 function Map() {
   const btn_style04 = { color: "E8F0F2", fontSize: "35px", marginTop: "13px" }
-
-  const {datosFuentes, setDatosFuentes } = useState(Fuentes);
+  const [datosFuentes, setDatosFuentes] = useState(Fuentes);
   let loveIcon = new L.icon({
     iconUrl: Ubicacion,
     iconRetinaUrl: Ubicacion,
@@ -54,9 +54,36 @@ function Map() {
         popupAnchor: [0, -15],
       });
 
+      //useEffect para que renderice
+      useEffect(() => {
+        console.log('datos fuentes', datosFuentes);
+      }, [datosFuentes])
+
+
+      //funcion para probar que agregue y recargue
+    
+      function agrega(x) {
+
+        let nuevosDatos = JSON.parse(JSON.stringify(datosFuentes));
+        nuevosDatos.features.push(x);
+        setDatosFuentes(nuevosDatos);
+        console.log('datos cargados', nuevosDatos);
+      
+        console.log('array viejo', datosFuentes);
+        // let nuevosDatos = [...datosFuentes];
+        //no es un array
+        // let nuevosDatos = datosFuentes;
+        //lo trato como un objeto? 
+        // console.log('index del objeto', datosFuentes.features); 
+
+        
+      }
+
+
     return (
         <>
        <NavBar />
+       <button onClick={()=>agrega('nuevafuente')}> Agregar fuente</button>
       <div className="position_map">
       {/* lat: 40.463667, lng: -3.74922  */}
         <MapContainer
@@ -68,7 +95,7 @@ function Map() {
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           <MarkerClusterGroup markers={FuentesIcon}>
-          <GeoJSON data={Fuentes}  pointToLayer={(feature, latlng) => {
+          <GeoJSON data={datosFuentes}  pointToLayer={(feature, latlng) => {
             if (Marker) {
               return L.marker(latlng, { icon: FuentesIcon });
             }
@@ -86,6 +113,8 @@ function Map() {
           <LocationMarker />
         </MapContainer>
         </div>  
+
+        <button onClick={()=>agrega('nuevafuente')}> Agregar fuente</button>
         <Link to="/new" replace>
         <div class="add_newfont">
            <BsPlusLg style={btn_style04}/>
