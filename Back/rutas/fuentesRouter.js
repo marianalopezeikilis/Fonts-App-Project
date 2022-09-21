@@ -28,9 +28,9 @@ router.post('/nuevafuente', function (req, res, next) {
 
         sequelize.sync().then(() => {
             Fuentes.findAll()
-                .then(news => res.json({
+                .then(fuente => res.json({
                     ok: true,
-                    data: news
+                    data: fuente.map((e)=>{return JSON.parse(e.datos_fuente)})
                 }))
                 .catch(error => res.json({
                     ok: false,
