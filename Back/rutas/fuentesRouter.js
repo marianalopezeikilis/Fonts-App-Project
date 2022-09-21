@@ -5,9 +5,10 @@ const router = express.Router();
 
 // CREAR UNA FUENTE
 router.post('/nuevafuente', function (req, res, next) {
-    sequelize.sync().then(() => {
+    sequelize.sync().then(async() => {
         console.log(req.body);
-        Fuentes.create(req.body)
+        console.log(req.body.datos_fuente);
+         Fuentes.create({datos_fuente:req.body.datos_fuente})
             .then((item) => res.json({ ok: true, data: item }))
             .catch((error) => res.json({ ok: false, error: error.message }))
 
