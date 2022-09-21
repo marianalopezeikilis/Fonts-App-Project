@@ -4,7 +4,7 @@ import Fuentes from '../Models/Fuentes.js';
 const router = express.Router();
 
 // CREAR UNA FUENTE
-router.post('/newfont', function (req, res, next) {
+router.post('/nuevafuente', function (req, res, next) {
     sequelize.sync().then(() => {
         console.log(req.body);
         Fuentes.create(req.body)
