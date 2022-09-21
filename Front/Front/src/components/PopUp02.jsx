@@ -2,9 +2,7 @@ import '../App.css'
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { useState } from 'react';
 
-function PopUp({setPopup}) {
-
-
+function PopUp02({setPopup02}) { //Faltarà els props per editar la visibilitat
     return (
         <>
             <style type="text/css">
@@ -13,7 +11,7 @@ function PopUp({setPopup}) {
                   background-color: #93BFD7;
                   color: white;
                   margin-bottom:10px;
-                  margin-top:-10px;
+                  margin-top: -10px;
                   box-sizing: border-box;
                   box-shadow: 2px 2px 5px #888888;
                   border:none;
@@ -33,10 +31,9 @@ function PopUp({setPopup}) {
                     <Container>
                         <Row className="justify-content-center">
                             <Col xs="12">
-                                <h1>AÑADIR FUENTE</h1>
+                                <h1>FUENTE AÑADIDA</h1>
                                 <hr></hr>
-                                <p>Marca donde está la fuente a añadir.</p>
-                                <Button variant="celeste" onClick={() => setPopup(true)}>Salir</Button>
+                                <Button variant="celeste" onClick={() => setPopup02(true)}>Salir</Button> 
                             </Col>
                         </Row>
 
@@ -46,4 +43,4 @@ function PopUp({setPopup}) {
     );
 }
 
-export default PopUp;
+export default PopUp02;
