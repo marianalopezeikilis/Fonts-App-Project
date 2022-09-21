@@ -16,7 +16,7 @@ app.use(cors());
 
 app.use('/', indexRouter);
 app.use('/api/news', newsRouter);
-app.use('/fuentestest', fuentesRouter);
+app.use('/api/fuentes', fuentesRouter);
 app.use('/img', express.static(__dirname + '/uploads'));
 
 const port = 3000

@@ -1,12 +1,7 @@
 import express from 'express';
-
 import { sequelize } from "../loadSequelize.js";
-
 import Fuentes from '../Models/Fuentes.js';
-
-
 const router = express.Router();
-
 
 // CREAR UNA FUENTE
 router.post('/newfont', function (req, res, next) {
@@ -25,7 +20,29 @@ router.post('/newfont', function (req, res, next) {
     });
 });
 
-
     ;
+
+    //COGER FUENTES
+
+    router.get('/', function (req, res, next) {
+
+        sequelize.sync().then(() => {
+            Fuentes.findAll()
+                .then(news => res.json({
+                    ok: true,
+                    data: news
+                }))
+                .catch(error => res.json({
+                    ok: false,
+                    error: error
+                }))
+        }).catch((error) => {
+            res.json({
+                ok: false,
+                error: error
+            })
+        });
+    
+    })
 
 export default router;
