@@ -15,12 +15,6 @@ function BlogLogin() {
               <Form.Group className="mb-3" controlId="formBasicText">
               <Form.Label class="login_text_color">Usuario</Form.Label>
                 <Form.Control type="text" placeholder="Nombre de usuario" />
-
-                <Form.Label class="login_text_color">Usuario</Form.Label>
-                <Form.Control type="text" placeholder="Nombre de usuario" />
-
-                <Form.Label className="login_text_color">Username</Form.Label>
-                <Form.Control type="text" placeholder="Enter username" />
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label class="login_text_color">Contraseña</Form.Label>
