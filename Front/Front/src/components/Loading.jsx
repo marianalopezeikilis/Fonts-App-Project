@@ -5,7 +5,7 @@ function Loading() {
   return (
     <div className="containerhome containerloading">
 
-<h1 className='d-block'>Cargando</h1>      
+<h1 className='d-block'>Cargando...</h1>      
 
 
       <img 

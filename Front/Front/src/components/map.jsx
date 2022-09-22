@@ -37,25 +37,42 @@ function Map() {
   const [error, setError] = useState("");
   const [datosArribados, setDatosArribados] = useState([]);
   const [estado, setEstado] = useState(0);
-  const [ubicacion, setUbicacion] = useState({});
+  const [ubicacion, setUbicacion] = useState('');
 const [layer2, setLayer2] = useState('');
+const [ubicacion2, setUbicacion2] = useState(null);
 
   useEffect(() => {}, [datosFuentes]);
 
 
   function MyComponent() {
     const map = useMapEvent('click', (ev) => {
-      console.log(ev.latlng);
-      setUbicacion(ev.latlng);
-      console.log('evlat',ev.latlng)
-   
-      L.marker(ev.latlng).addTo(map);
-      setLayer2(L.marker(ev.latlng).addTo(map)
-      );
+      console.log('latitud', ev.latlng);
+    setUbicacion(ev.latlng);
+setUbicacion2([ev.latlng.lng,ev.latlng.lat]);
+console.log(ubicacion2);
+      L.marker((ev.latlng), { icon: FuentesIcon }).addTo(map);
+      // setLayer2(L.marker(ev.latlng).addTo(map)
+      // );
       setEstado(3);
     })
     return null
   }
+  
+
+
+useEffect(() => {
+console.log('ubicacion cambio', ubicacion2);
+if (estado===4 && ubicacion2!==null){
+  console.log('ubicacion cambio', ubicacion2);
+  agrega(ubicacion2);
+}
+// if (ubicacion2!==null){
+//   agrega(ubicacion2);
+// };
+
+}, [estado]);
+
+
   function loadData() {
     fetch("http://localhost:3000/api/fuentes/")
       .then((resultado) => resultado.json())
@@ -94,7 +111,7 @@ const [layer2, setLayer2] = useState('');
 
 
 const ventana = () => {
-if (estado===0) 
+if (estado===0 || estado ===4) 
     {return (<div className="add_newfont" onClick={() => setEstado(1)}>
       <BsPlusLg style={btn_style04} /> </div>)} 
 
@@ -148,10 +165,14 @@ if (estado===0)
     popupAnchor: [0, -15],
   });
 
-    function agrega(x) {
+    function agrega(ubicacion2) {
     
       const fu = {
-        datos_fuente: JSON.stringify(x),
+        datos_fuente: JSON.stringify({
+          type: "Feature",
+          properties: { id: "pepito", name: "nueva fuente" },
+          geometry: { type: "Point", coordinates: ubicacion2 },
+        }),
       };
 
       fetch("http://localhost:3000/api/fuentes/nuevafuente", {
@@ -168,14 +189,12 @@ if (estado===0)
     console.log(datosFuentes);
 
     function cambiaEstado(x) {
-    setEstado(x);
+      // if(estado===3 && x===0) {
+      // // agrega();
+      // }
+      setEstado(x);
     //si acabamos de agregar un componente y pongo anadir que se agregue
-if(estado===3 && x===0) {
-  map.removeLayer(layer2);
-  console.log('estado 3 lanzado',layer2);
-  ;
 
-}
 
     }
  
@@ -225,7 +244,7 @@ if(estado===3 && x===0) {
 
                 if (!name) return;
 
-                layer.bindPopup(`<p>${name}</p>`);
+                // layer.bindPopup(`<p>${name}</p>`);
               }}
             ></GeoJSON>
             

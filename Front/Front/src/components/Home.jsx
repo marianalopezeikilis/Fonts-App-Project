@@ -12,9 +12,9 @@ function Home() {
     <Container fluid className="containerhome">
       <Row className="justify-content-center">
         <Col xs="2" md="2" lg="4" className="colhome">
-          <h1 className="h1home"> Water care </h1>
-          <img className="imgagua" src="/img/logo02.png" />
-          <br />
+         <div className='d-flex logo'> <h1 className="h1home"> Water care </h1>
+        <img className="imgagua" src="/img/logo02.png" /></div>
+          
           <p className="texthome">
             {" "}
             Descubre las novedades medioambientales en nuestro blog y encuentra
@@ -22,7 +22,7 @@ function Home() {
             público y contribuir al mismo tiempo a nuestro planeta.
           </p>
 
-          <ButtonBlue text="Blog" ruta="/blog" />
+          <ButtonBlue text="Noticias" ruta="/blog" />
           <br className="d-xl-none"/>
           <ButtonBlue text="Fuentes" ruta="/fuentes" />
           

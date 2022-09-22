@@ -3,6 +3,9 @@ import { Button, Card, Col, Row } from "react-bootstrap";
 import "./App.css";
 import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
+import CardGroup from 'react-bootstrap/CardGroup';
+import Loading from './components/Loading';
+
 
 
 
@@ -34,7 +37,7 @@ function Blog() {
   }
 
   if (dades.length === 0) {
-    return <h3>No hi ha dades</h3>;
+    return <Loading/>;
   }
 
 
@@ -59,19 +62,24 @@ function Blog() {
         }
     `}
       </style>
-      <Col>
-        <Card>
-          <Card.Img variant="top" src={"http://localhost:3000/img/" + el.img} />
+      <Col className='moreheight m-0  '>
+      {/* <CardGroup> */}
+        <Card className='moreheight'>
+          <Card.Img classname='imgcard' variant="top" src={"http://localhost:3000/img/" + el.img} />
           <Card.Body>
             <Card.Title>{el.titulo}</Card.Title>
             <Card.Text>
               {el.subtitulo}
             </Card.Text>
-            <Link to={`/view/${el.id}`}>
-              <Button variant="celeste" size="xl">Ver mas</Button>
-            </Link>
           </Card.Body>
+        <Card.Footer>
+          <small className="text-muted"><Link to={`/view/${el.id}`}>
+              <Button variant="celeste" className='vermas' size="xl">Ver mas</Button>
+            </Link></small>
+        </Card.Footer>
+          
         </Card>
+        {/* </CardGroup> */}
       </Col>
     </div>
   ));
@@ -85,7 +93,7 @@ function Blog() {
         <div className=" containerimg">
 
           <Row xs={1} md={2}
-            xl={(dades.length > 2 ? 4 : 2)} className="g-4 m-0">
+            xl={(dades.length > 2 ? 4 : 2)} className="g-4 m-3">
 
             {lista} </Row>
         </div>

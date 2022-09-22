@@ -3,6 +3,7 @@ import './App.css'
 import { Form, Container, Row, Col } from 'react-bootstrap';
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import Loading from "./components/Loading.jsx";
 
 function BlogView() {
     const [dades, setDades] = useState([]);
@@ -32,7 +33,7 @@ function BlogView() {
     }
 
     if (dades.length === 0) {
-        return <h3>No hi ha dades</h3>;
+        return <Loading/>;
     }
 
     return (

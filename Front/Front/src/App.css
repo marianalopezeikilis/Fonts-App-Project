@@ -2,6 +2,7 @@
   width: 50px;
   height: 50px;
   margin: 10px;
+  animation: App-logo-spin infinite 20s linear
 }
 
 body .texthome .h1home button .containerhome {
@@ -247,6 +248,7 @@ body .texthome .h1home button .containerhome {
 
 .containerimg {
   display: flex;
+ 
 }
 
 
@@ -367,4 +369,27 @@ body .texthome .h1home button .containerhome {
 
 .pop_up p{
   margin-top: -10px;
+}
+
+.logo{
+  align-items: center;
+  justify-content: center;
+}
+
+.moreheight {
+  height: 100%;
+}
+
+/* .vermas{
+  position:absolute;
+  bottom: 10px;
+} */
+
+.card-footer {
+  background-color:white;
+  border-top:none;
+}
+
+.card-img-top{
+  aspect-ratio: 4/3;
 }

@@ -33,7 +33,7 @@ function PopUp02({cambiaEstado}) { //Faltarà els props per editar la visibilita
                             <Col xs="12">
                                 <h1>Has seleccionado una ubicacion</h1>
                                 <hr></hr>
-                                <Button  variant="celeste" onClick={()=>{cambiaEstado(0)}}>Añadir</Button> 
+                                <Button  variant="celeste" onClick={()=>{cambiaEstado(4)}}>Añadir</Button> 
                                 <Button  variant="celeste" onClick={()=>{cambiaEstado(0)}}>Cancelar</Button> 
                             </Col>
                         </Row>
