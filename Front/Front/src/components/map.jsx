@@ -38,7 +38,7 @@ function Map() {
   const [datosArribados, setDatosArribados] = useState([]);
   const [estado, setEstado] = useState(0);
   const [ubicacion, setUbicacion] = useState({});
-const [layer, setLayer] = useState('');
+const [layer2, setLayer2] = useState('');
 
   useEffect(() => {}, [datosFuentes]);
 
@@ -50,7 +50,7 @@ const [layer, setLayer] = useState('');
       console.log('evlat',ev.latlng)
    
       L.marker(ev.latlng).addTo(map);
-      setLayer(L.marker(ev.latlng).addTo(map)
+      setLayer2(L.marker(ev.latlng).addTo(map)
       );
       setEstado(3);
     })
@@ -171,8 +171,8 @@ if (estado===0)
     setEstado(x);
     //si acabamos de agregar un componente y pongo anadir que se agregue
 if(estado===3 && x===0) {
-  layer.remove();
-  console.log('layer',layer);
+  map.removeLayer(layer2);
+  console.log('estado 3 lanzado',layer2);
   ;
 
 }
@@ -185,7 +185,7 @@ if(estado===3 && x===0) {
           ERA UN BOTO DE PROVA, PERÒ LA ACCIó HA DE PASSAR QUAN S'AGREGUI LA FONT
       {*/}
       <NavBar />
-      <button
+      {/* <button
         onClick={() =>
           agrega({
             type: "Feature",
@@ -196,7 +196,7 @@ if(estado===3 && x===0) {
       >
         {" "}
         Agregar fuente
-      </button>
+      </button> */}
       <div className="position_map madre" id="map">
         {/* lat: 40.463667, lng: -3.74922  */}
 
