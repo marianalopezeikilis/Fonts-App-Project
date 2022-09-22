@@ -2,8 +2,7 @@ import '../App.css'
 import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { useState } from 'react';
 
-function PopUp({setPopup}) {
-
+function PopUp({cambiaEstado}) {
 
     return (
         <>
@@ -35,8 +34,8 @@ function PopUp({setPopup}) {
                             <Col xs="12">
                                 <h1>AÑADIR FUENTE</h1>
                                 <hr></hr>
-                                <p>Marca donde está la fuente a añadir.</p>
-                                <Button variant="celeste" onClick={() => setPopup(true)}>Salir</Button>
+                                <p>Señala en el mapa la ubicación de la fuente a añadir.</p>
+                                  <Button variant="celeste" onClick={() => cambiaEstado(0)}>Cancelar</Button>
                             </Col>
                         </Row>
 

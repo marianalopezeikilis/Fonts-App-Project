@@ -1,15 +1,17 @@
 import "../App.css";
-port { render } from 'react-dom';
+import { render } from 'react-dom';
 import { BsPlusLg } from "react-icons/bs";
+
+
 import {
   MapContainer,
   TileLayer,
   useMap,
   Marker,
   Popup,
-  useMapEvents,
+  useMapEvent,
   GeoJSON,
-  Circle,
+  Circle
 } from "react-leaflet";
 import { useState, useEffect } from "react";
 import { map } from 'leaflet';
@@ -34,14 +36,26 @@ function Map() {
   const [datos, setDatos] = useState(null);
   const [error, setError] = useState("");
   const [datosArribados, setDatosArribados] = useState([]);
-  const [popup, setPopup] = useState(true)
-  const [popup02, setPopup02] = useState(true)
-
-
-
+  const [estado, setEstado] = useState(0);
+  const [ubicacion, setUbicacion] = useState({});
+const [layer, setLayer] = useState('');
 
   useEffect(() => {}, [datosFuentes]);
 
+
+  function MyComponent() {
+    const map = useMapEvent('click', (ev) => {
+      console.log(ev.latlng);
+      setUbicacion(ev.latlng);
+      console.log('evlat',ev.latlng)
+   
+      L.marker(ev.latlng).addTo(map);
+      setLayer(L.marker(ev.latlng).addTo(map)
+      );
+      setEstado(3);
+    })
+    return null
+  }
   function loadData() {
     fetch("http://localhost:3000/api/fuentes/")
       .then((resultado) => resultado.json())
@@ -76,6 +90,21 @@ function Map() {
     iconSize: [20, 20],
     popupAnchor: [0, -10],
   });
+
+
+
+const ventana = () => {
+if (estado===0) 
+    {return (<div className="add_newfont" onClick={() => setEstado(1)}>
+      <BsPlusLg style={btn_style04} /> </div>)} 
+
+      else if (estado===1) { return (
+      <PopUp cambiaEstado={cambiaEstado}></PopUp>) } 
+      
+      else if (estado===2) {return (<div></div>)}
+
+      else if (estado==3) {return (<PopUp02 cambiaEstado={cambiaEstado}></PopUp02>)}
+}
 
   function JsonMasApi() {
     if (datos === null) {
@@ -119,34 +148,6 @@ function Map() {
     popupAnchor: [0, -15],
   });
 
-  //funcion para probar que agregue y recargue
-  //       function agrega(x) {
-  // console.log('datos ANTIGUOS', datosFuentes);
-  //         let nuevosDatos = JSON.parse(JSON.stringify(datosFuentes));
-  //         nuevosDatos.features.push(x);
-  //         setDatosFuentes(nuevosDatos);
-  //         console.log('datos cargados', nuevosDatos);
-  //         setLlave(nuevosDatos.features.length);
-
-  //         // x.preventDefault();
-  //         const datos = {
-  //            datos_fuente: datosCargar
-  //         } ;
-
-  //         fetch("http://localhost:3000/api/fuentes/nuevafuente",
-  //         {
-  //             headers: {
-  //               'Accept': 'application/json',
-  //               'Content-Type': 'application/json'
-  //             },
-  //             method: "POST",
-  //             body: JSON.stringify(datos)
-  //         })
-  //         .then(res => loadData())
-  //         .catch(err => console.log("error: ", err))
-
-  //       }
-
     function agrega(x) {
     
       const fu = {
@@ -166,6 +167,18 @@ function Map() {
     }
     console.log(datosFuentes);
 
+    function cambiaEstado(x) {
+    setEstado(x);
+    //si acabamos de agregar un componente y pongo anadir que se agregue
+if(estado===3 && x===0) {
+  layer.remove();
+  console.log('layer',layer);
+  ;
+
+}
+
+    }
+ 
   return (
     <>
       {/*}<button onClick={() => setPopup02(false)}> Agregar fuente</button>
@@ -184,13 +197,13 @@ function Map() {
         {" "}
         Agregar fuente
       </button>
-      <div className="position_map madre">
+      <div className="position_map madre" id="map">
         {/* lat: 40.463667, lng: -3.74922  */}
 
         <MapContainer
           center={{ lat: 40.463667, lng: -3.74922 }}
           zoom={5}
-          scrollWheelZoom={true}
+          scrollWheelZoom={true} 
         >
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -215,37 +228,24 @@ function Map() {
                 layer.bindPopup(`<p>${name}</p>`);
               }}
             ></GeoJSON>
+            
           </MarkerClusterGroup>
           <LocationMarker />
+          {estado===1 ? <MyComponent/> : null}
         </MapContainer>
 
 
-      {/*If de la constante popup (true y false)
-          True: Se ve el boton de añadir fuente
-          False: Se ve el PopUp que anuncia que estas en añadir fuente y esconde el boton añadir fuente*/}
-      {popup ? (<div className="add_newfont" onClick={() => setPopup(false)}>
-          <BsPlusLg style={btn_style04} />
-        </div>) : (
-        <PopUp setPopup={setPopup}>
-        </PopUp>
-      )}
-
-      {/*If que sirve para vizibilizar el PopUp02 que anuncia que se ha añadido una fuente
-          True: està escondido
-          False: Es visible -> setPopup02(false)
-      
-      */}
-      {popup02 ? <></> : (
-        <PopUp02 setPopup02={setPopup02}>
-        </PopUp02>
-      )}
       </div>
-      <Link to="/new" replace>
-        <div className="add_newfont">
-          <BsPlusLg style={btn_style04} />
-        </div>
-      </Link>
+     
+ {/* Leaflet | © OpenStreetMap contributors */}
+
+
+<div>
+            {ventana()}
+          </div>
+      
     </>
+    
   );
 }
 export default Map;
